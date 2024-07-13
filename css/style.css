@@ -1,0 +1,15 @@
+:root {
+    font-size: 62.5%;
+}
+
+.barraDeNavegacao {
+    /* background-color: #18253f; */
+    /* background-color: #0D121C; */
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #8080803b;
+    padding: 0.4rem 8rem 0.4rem 8rem;
+    /* background: linear-gradient(90deg, #ffffff, #03445E 0%, #ffffff) */
+}
