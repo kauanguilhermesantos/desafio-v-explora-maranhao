@@ -1,6 +1,8 @@
 :root {
     font-size: 62.5%;
     --cor-vermelha-primaria: #BF2626;
+    --cor-vermelha-secundaria: #D98282;
+    --cor-preta: #0d0d0d;
 }
 
 .listaMenu .botoesDoMenu::after {
@@ -23,7 +25,8 @@
 }
 
 .botaoContato:hover {
-    background-color: #903b3b;
+    background-color: var(--cor-vermelha-secundaria);
+    /* color: var(--cor-preta); */
     cursor: pointer;
     transition: 0.3s linear;
 }
