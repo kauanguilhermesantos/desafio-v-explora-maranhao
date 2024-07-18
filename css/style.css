@@ -44,3 +44,19 @@
     padding: 0.8rem 1rem;
     border-radius: 2rem;    
 }
+
+.rodape {
+    /* border: 1px solid red; */
+    background-color: var(--cor-azul-primaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    color: var(--cor-branca);
+    padding: 1.2rem 0;
+}
+
+.linkLinkedIn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--cor-vermelha-primaria);
+}
