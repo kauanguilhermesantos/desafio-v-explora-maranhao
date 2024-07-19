@@ -47,6 +47,24 @@
     border-radius: 2rem;
 }
 
+.banner {
+    width: 100%;
+    height: 56rem;
+    background: url(../assets/img/banner.png) no-repeat center;
+    background-size: cover;
+}
+
+.banner > h1 {
+    border: 1px solid red;
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--cor-branca);
+    text-shadow: 0.2rem 0.2rem 0.6rem var(--cor-preta);
+    text-align: center;
+    padding: 26rem 0;
+}
+
 .secaoContato {
     /* border: 1px solid red; */
     background-color: var(--cor-azul-primaria);
