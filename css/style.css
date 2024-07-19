@@ -55,7 +55,7 @@
 }
 
 .banner > h1 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: var(--fonte-primaria);
     font-weight: 600;
     font-size: 4rem;
