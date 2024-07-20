@@ -14,12 +14,18 @@
 }
 
 .barraDeNavegacao {
+    width: 100%;
+    background-color: var(--cor-branca);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.1rem solid #8080803b;
     padding: 0.4rem 8rem 0.4rem 8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem #0000001c;
+    /* position: -webkit-sticky; */
+    position: fixed;
+    top: 0;
+    /* z-index: 1000; */
 }
 
 .logoComTexto {
@@ -62,7 +68,7 @@
     color: var(--cor-branca);
     text-shadow: 0.2rem 0.2rem 0.6rem var(--cor-preta);
     text-align: center;
-    padding: 26rem 0;
+    padding: 28rem 0;
 }
 
 .secaoContato {
