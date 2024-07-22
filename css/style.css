@@ -79,6 +79,78 @@ main {
     padding: 24rem 0;
 }
 
+.textoSobre {
+    /* border: 1px solid red; */
+    margin: 0 8rem;
+}
+
+.textoSobre > :nth-child(3), .textoSobre > :nth-child(5), .textoSobre > :nth-child(7), .textoSobre > :nth-child(9) {
+    display: flex;
+    flex-direction: row;
+}
+
+.paragrafoInicialSobre > h2 {
+    /* border: 1px solid red; */
+    font-family: var(--fonte-primaria);
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 1.8rem 0;
+}
+
+.paragrafoInicialSobre > p, .paragrafoFinalSobre {
+    border: 1px solid red;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    text-align: justify;
+    text-align: center;
+    text-indent: 2rem;
+    margin: 1.8rem 0;
+    line-height: 2.2rem;
+}
+
+.chamadaSobre {
+    border: 1px solid    red;
+    display: flex;
+    flex-direction: row-reverse;
+    /* gap: 10rem; */
+    margin: 5rem;
+}
+
+
+
+.chamadaSobre > img {
+    width: 50rem;
+    /* height: 30rem; */
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 1rem var(--cor-preta);
+}
+
+.chamadaSobre > div {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+.chamadaSobre > div > h3 {
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.chamadaSobre > div > p {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    text-align: justify;
+    text-indent: 2rem;
+    margin: 1.8rem 0;
+    line-height: 2.2rem;
+}
+
 .secaoContato {
     /* border: 1px solid red; */
     background-color: var(--cor-azul-primaria);
