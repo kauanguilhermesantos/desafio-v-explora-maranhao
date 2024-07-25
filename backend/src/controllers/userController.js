@@ -11,8 +11,13 @@ class UserController {
 
   static async listarUsersById(req, res) {
     const userId = req.params.id;
-    const userEncontrado = await User.findByPk(userId);
-    res.status(200).json({ message: "usuario encontrado", user: userEncontrado instanceof User, id: userId });
+    try {
+      const userEncontrado = await User.findByPk(userId);
+      res.status(200).json({ message: "usuario encontrado", user: userEncontrado instanceof User, id: userId });
+    } catch (error) {
+      res.status(500).json({message: `Falha ao encontrar usuario - ${error}`});
+    }
+    
   }
 
   static async cadastrarUser(req, res) {
