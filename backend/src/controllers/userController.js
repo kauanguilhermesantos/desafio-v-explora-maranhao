@@ -20,6 +20,29 @@ class UserController {
     await User.create({ firstname: novoUser.firstname, lastname: novoUser.lastname, email: novoUser.email, password: novoUser.password });
     res.status(201).json({ message: "usuario cadastrado com sucesso!" });
   }
+
+  static async atualizarUserById(req, res) {
+    const userId = req.params.id;
+    //const newValue = req.body.campo;
+    const userEncontrado = await User.findByPk(userId);
+    // atualizar
+    // userEncontrado.set({campo : newValue});
+    res.status(201).json({message: "credenciais de usuario atualizado com sucesso!"});
+  }
+
+  static async deleteUserById(req, res) {
+    const userId = req.params.id;
+    try {
+      const userEncontrado = await User.findByPk(userId);
+      await userEncontrado.destroy();
+      res.send(200).json({message: "usuario excluido"});
+    } catch (error) {
+      res.send(500).json({message: "falha na exclusão de usuario"});
+    }
+    
+
+   
+  }
 }
 
 
