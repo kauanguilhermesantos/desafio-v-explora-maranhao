@@ -1,26 +1,78 @@
 import User from "../models/userModel.js";
 
 
-await User.sync({ force: true });
+await User.sync();
 
 class UserController {
   static async listarUsers(req, res) {
     const listaUsuarios = await User.findAll({});
-    res.status(200).json(listaUsuarios)
+    res.status(200).json(listaUsuarios);
   }
 
   static async listarUsersById(req, res) {
-    const userId = req.params.id;
-    const userEncontrado = await User.findByPk(userId);
-    res.status(200).json({ message: "usuario encontrado", user: userEncontrado instanceof User, id: userId });
+    try {
+      const userId = req.params.id;
+      const userEncontrado = await User.findByPk(userId);
+
+      if (userEncontrado != null) {
+        res.status(200).json({ message: "usuario encontrado", user: userEncontrado });
+      } else {
+        res.status(404).json({ message: "user not found" });
+      }
+    } catch (error) {
+      console.error(`Falha ao listar usuario - ${error}`)
+
+    }
+  }
+  static async cadastrarUser(req, res) {
+    try {
+      const novoUser = req.body;
+      await User.create({ name: novoUser.name, email: novoUser.email, password: novoUser.password });
+      res.status(200).json({ message: "usuario cadastrado com sucesso!" });
+
+    } catch (error) {
+      console.error(`Falha ao cadastrar usuario - ${error}`)
+    }
   }
 
-  static async cadastrarUser(req, res) {
-    const novoUser = req.body;
-    await User.create({ firstname: novoUser.firstname, lastname: novoUser.lastname, email: novoUser.email, password: novoUser.password });
-    res.status(201).json({ message: "usuario cadastrado com sucesso!" });
+  static async atualizarUserNameById(req, res) {
+    try {
+      const userId = req.params.id;
+      const novoNome = req.body.name;
+      const userEncontrado = await User.findByPk(userId);
+
+      if (userEncontrado != null) {
+        userEncontrado.name = novoNome;
+        await userEncontrado.save();
+        res.status(200).json({ message: "nome atualiado" });
+      } else {
+        res.status(404).json({ message: "user not found" });
+      }
+
+
+    } catch (error) {
+      console.error(`Falha ao atualizar nome de usuario - ${error}`)
+    }
+  }
+
+  static async deletarUserById(req, res) {
+    try {
+      const userId = req.params.id;
+      const userEncontrado = await User.findByPk(userId);
+
+      if (userEncontrado != null) {
+        await userEncontrado.destroy();
+        res.status(200).json({ message: "usuario excluido com sucesso" });
+      } else {
+        res.status(404).json({ message: "user not found" });
+      }
+
+
+    } catch (error) {
+      console.error(`Falha ao excluir usuario - ${error}`)
+
+    }
   }
 }
-
 
 export default UserController;
