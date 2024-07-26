@@ -15,7 +15,7 @@ class UserController {
       const userEncontrado = await User.findByPk(userId);
 
       if (userEncontrado != null) {
-        res.status(200).json({ message: "usuario encontrado", user: userEncontrado });
+        res.status(200).json(userEncontrado);
       } else {
         res.status(404).json({ message: "user not found" });
       }
