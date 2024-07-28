@@ -49,6 +49,73 @@ html {
     gap: 1.6rem;
 }
 
+.menu_lateral {
+    width: 200px;
+    height: 100vh;
+    background-color: orange;
+}
+
+.menu_lateral_item {
+    margin-left: 40px;
+    padding: 10px;
+    font-family: var(--fonte-secundaria);
+    font-size: 18px;
+}
+
+/* caixa de busca e seus compenentes*/
+.caixaBusca {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixaBusca .row-0 {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 500px;
+    height: 70px;
+
+}
+
+.caixaBusca_input {
+    font-family: var(--fonte-secundaria);
+    font-size: 18px;
+    margin-left: 5%;
+    width: 80%;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.caixaBusca_button {
+    margin-left: 10px;
+    background-color: green;
+    color: white;
+    width: 60px;
+    height: 40px;
+    font-family: var(--fonte-secundaria);
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.caixaBusca_filtros {
+    /* margin-left: 100px; */
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: blue;
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    font-family: var(--fonte-secundaria);
+}
+
+/* end */
+
+
 .botaoContato {
     /* border: 1px solid red; */
     background-color: var(--cor-vermelha-primaria);
@@ -68,7 +135,8 @@ main {
     background-size: cover;
 }
 
-.banner > h1, .bannerSobre > h1 {
+.banner>h1,
+.bannerSobre>h1 {
     /* border: 1px solid red; */
     font-family: var(--fonte-primaria);
     font-weight: 600;
@@ -84,12 +152,15 @@ main {
     margin: 0 8rem;
 }
 
-.textoSobre > :nth-child(2), .textoSobre > :nth-child(4), .textoSobre > :nth-child(6), .textoSobre > :nth-child(8) {
+.textoSobre> :nth-child(2),
+.textoSobre> :nth-child(4),
+.textoSobre> :nth-child(6),
+.textoSobre> :nth-child(8) {
     display: flex;
     flex-direction: row;
 }
 
-.paragrafoInicialSobre > h2 {
+.paragrafoInicialSobre>h2 {
     /* border: 1px solid red; */
     font-family: var(--fonte-primaria);
     font-size: 2.2rem;
@@ -98,7 +169,7 @@ main {
     margin: 3rem 0;
 }
 
-.paragrafoInicialSobre > p {
+.paragrafoInicialSobre>p {
     /* border: 1px solid red; */
     font-family: var(--fonte-secundaria);
     font-size: 1.8rem;
@@ -135,14 +206,14 @@ main {
     box-shadow: 0.2rem 0.2rem 1rem var(--cor-preta);
 }
 
-.chamadaSobre > img {
+.chamadaSobre>img {
     width: 50rem;
     /* height: 30rem; */
     border-radius: 1rem;
     box-shadow: 0.1rem 0.1rem 0.4rem var(--cor-preta);
 }
 
-.chamadaSobre > div {
+.chamadaSobre>div {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -151,7 +222,7 @@ main {
     margin: 5rem;
 }
 
-.chamadaSobre > div > h3 {
+.chamadaSobre>div>h3 {
     font-family: var(--fonte-primaria);
     font-size: 2.2rem;
     font-weight: 500;
@@ -159,7 +230,7 @@ main {
     margin: 2rem;
 }
 
-.chamadaSobre > div > p {
+.chamadaSobre>div>p {
     font-family: var(--fonte-secundaria);
     font-size: 1.8rem;
     font-weight: 300;
@@ -169,11 +240,11 @@ main {
     line-height: 2.8rem;
 }
 
-.chamadaSobre > div > p > strong {
+.chamadaSobre>div>p>strong {
     color: var(--cor-vermelha-primaria);
 }
 
-.paragrafoFinalSobre > p {
+.paragrafoFinalSobre>p {
     font-family: var(--fonte-secundaria);
     font-size: 1.6rem;
     font-weight: 300;
@@ -195,7 +266,8 @@ main {
     padding: 2rem 8rem;
 }
 
-.secaoContato .contato, .secaoContato .servicos{
+.secaoContato .contato,
+.secaoContato .servicos {
     font-family: var(--fonte-secundaria);
     font-size: 1.4rem;
     display: flex;
@@ -204,7 +276,9 @@ main {
     gap: 0.8rem;
 }
 
-.secaoContato .contato > h3, .secaoContato .servicos > h3, .secaoContato .formasDePagamento > h3 {
+.secaoContato .contato>h3,
+.secaoContato .servicos>h3,
+.secaoContato .formasDePagamento>h3 {
     font-family: var(--fonte-primaria);
     color: var(--cor-cinza);
     font-weight: 500;
@@ -212,29 +286,32 @@ main {
     margin-bottom: 1.2rem;
 }
 
-.secaoContato .contato > p, .secaoContato .servicos > p {
+.secaoContato .contato>p,
+.secaoContato .servicos>p {
     /* border: 1px solid red; */
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.fa-envelope, .fa-phone, .fa-square-whatsapp {
+.fa-envelope,
+.fa-phone,
+.fa-square-whatsapp {
     /* border: 1px solid red; */
     font-size: 1.8rem;
     color: var(--cor-cinza);
     margin: 0 0.6rem 0 0;
 }
 
-.secaoContato .formasDePagamento > div {
+.secaoContato .formasDePagamento>div {
     /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
     /* flex-direction: column; */
 }
 
-.secaoContato .formasDePagamento div > img {
+.secaoContato .formasDePagamento div>img {
     /* border: 1px solid red; */
     width: 4.4rem;
     height: 3.3rem;
@@ -251,7 +328,8 @@ main {
     padding: 1.2rem 0;
 }
 
-.linkLinkedIn:hover, .secaoContato .servicos > p:hover {
+.linkLinkedIn:hover,
+.secaoContato .servicos>p:hover {
     text-decoration: underline;
     cursor: pointer;
     color: var(--cor-vermelha-primaria);
@@ -263,4 +341,3 @@ main {
     background: url(../assets/img/slz.png) no-repeat center;
     background-size: cover;
 }
-
