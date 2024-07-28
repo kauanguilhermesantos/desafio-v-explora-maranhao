@@ -21,18 +21,49 @@
 
 <body>
     <header>
-        <nav class="barraDeNavegacao">
-            <a href="../../index.html"><img src="../assets/logo/logo-com-texto-explora-maranhao.png"
-                    alt="Logo do Explora Maranhão" class="logoComTexto"></a>
-            <ul class="navMenu">
-                <li class="listaMenu"><a href="../../index.html" class="botoesDoMenu">Home</a></li>
-                <li class="listaMenu"><a href="./front-end/paginas/sobre.html" class="botoesDoMenu">Sobre</a></li>
-                <li class="listaMenu"><a href="../paginas/destinos.html" class="botoesDoMenu">Destinos</a></li>
-                <li class="botaoContato"><a href="#contato">Contato</a></li>
-                <li class="botaoContato" data-bs-toggle="modal" data-bs-target="#janelaModal"><a
-                        href="#contato">Entrar</a></li>
-            </ul>
+        <nav>
+            <div class="navegacao">
+                <!--Menu na primeira linha-->
+                <div class="barraDeNavegacao">
+                    <!--logo-->
+                    <a href="../../index.html"><img src="../assets/logo/logo-com-texto-explora-maranhao.png"
+                            alt="Logo do Explora Maranhão" class="logoComTexto"></a>
 
+                    <!--caixa de busca-->
+                    <form class="caixaBusca" role="search">
+
+                        <div class="row-0">
+                            <input class="caixaBusca_input" type="search" placeholder="Search">
+                            <button class="caixaBusca_button" type="submit">Search</button>
+                        </div>
+
+                    </form>
+
+                    <!--items de menu-->
+                    <ul class="navMenu">
+                        <li class="listaMenu"><a href="../../index.html" class="botoesDoMenu">Home</a></li>
+                        <li class="listaMenu"><a href="./front-end/paginas/sobre.html" class="botoesDoMenu">Sobre</a>
+                        </li>
+                        <li class="listaMenu"><a href="../paginas/destinos.html" class="botoesDoMenu">Destinos</a></li>
+                        <li class="botaoContato"><a href="#contato">Contato</a></li>
+                        <li class="botaoContato" data-bs-toggle="modal" data-bs-target="#janelaModal"><a
+                                href="#contato">Entrar</a></li>
+                    </ul>
+
+
+                </div>
+
+                <!--Submenu na segunda linha-->
+                <div class="navSubmenu">
+                    <ul class="caixaBusca_filtros">
+                        <a href="#">Museu</a>
+                        <a href="#">Evento</a>
+                        <a href="#">Natureza</a>
+                        <a href="#">Aventura</a>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
 
@@ -77,29 +108,6 @@
 
     <main> <!--main-->
 
-        <!--caixa-de-busca-->
-        <form class="caixaBusca" role="search">
-
-            <div class="row-0">
-                <input class="caixaBusca_input" type="search" placeholder="Search">
-                <button class="caixaBusca_button" type="submit">Search</button>
-            </div>
-
-            <ul class="caixaBusca_filtros">
-                <a href="#">Museu</a>
-                <a href="#">Evento</a>
-                <a href="#">Natureza</a>
-                <a href="#">Aventura</a>
-            </ul>
-
-        </form>
-
-        <div class="menu_lateral"> <!-- lista de tipos-->
-            <li class="menu_lateral_item"><a href="#">Museus</a></li>
-            <li class="menu_lateral_item"><a href="#">Praias</a></li>
-            <li class="menu_lateral_item"><a href="#">Parques</a></li>
-            <li class="menu_lateral_item"><a href="#">Eventos</a></li>
-        </div>
 
     </main> <!--main-->
 
