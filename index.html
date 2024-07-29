@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./front-end/css/reset.css">
     <link rel="stylesheet" href="./front-end/css/style.css">
     <link rel="stylesheet" href="./front-end/css/hover.css">
+    <link rel="stylesheet" href="./front-end/css/slider.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./front-end/assets/favicon">
     <link rel="icon" type="image/png" sizes="32x32" href="./front-end/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./front-end/assets/favicon/favicon-16x16.png">
@@ -30,8 +31,48 @@
             <h1>Encontre aqui o destino da sua próxima aventura!</h1>
         </section>
         <div>
-            <h2>Destinos mais procurados</h2>
-            <div></div>
+            <h2 class="destinosHome">Destinos mais procurados</h2>
+            <div class="destinosMaisProcurados">
+                <div>
+                    <div class="cardDestinosMaisProcurados">
+                        <img src="./front-end/assets/img/1.png" alt="" class="imagemCardDestinoMaisProcurado">
+                        <p class="NomeCardDestinoMaisProcurado">Onde Judas Perdeu as Botas</p>
+                        <p class="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
+                        <span class="tipoAtrativoCardDestinoMaisProcurado">Perdição</span>
+                    </div>
+                    <div class="cardDestinosMaisProcurados">
+                        <img src="./front-end/assets/img/1.png" alt="" class="imagemCardDestinoMaisProcurado">
+                        <p class="NomeCardDestinoMaisProcurado">Onde Judas Perdeu as Botas</p>
+                        <p class="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
+                        <span class="tipoAtrativoCardDestinoMaisProcurado">Perdição</span>
+                    </div>
+                    <div class="cardDestinosMaisProcurados">
+                        <img src="./front-end/assets/img/1.png" alt="" class="imagemCardDestinoMaisProcurado">
+                        <div class="infoCardDestinosMaisProcurado">
+                            <p class="NomeCardDestinoMaisProcurado">Onde Judas Perdeu as Botas</p>
+                            <p class="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
+                            <span class="tipoAtrativoCardDestinoMaisProcurado">Perdição</span>
+                        </div>
+                    </div>
+                    <div class="cardDestinosMaisProcurados">
+                        <img src="./front-end/assets/img/1.png" alt="" class="imagemCardDestinoMaisProcurado">
+                        <p class="NomeCardDestinoMaisProcurado">Onde Judas Perdeu as Botas</p>
+                        <p class="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
+                        <span class="tipoAtrativoCardDestinoMaisProcurado">Perdição</span>
+                    </div>
+                    <div class="botoesDestinosMaisProcurado">
+                        <button id="anterior"><</button>
+                        <button id="proximo">></button>
+                    </div>
+                    <ul class="pontinhosDestinosMaisProcurado">
+                        <li class="ativo" data-index="0">•</li>
+                        <li data-index="1">•</li>
+                        <li data-index="2">•</li>
+                        <li data-index="3">•</li>
+                        <li data-index="4">•</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -68,5 +109,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/26cdbafd8c.js" crossorigin="anonymous"></script>
+    <script src="./front-end/scripts/slider.js"></script>
 </body>
 </html>
