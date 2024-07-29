@@ -84,33 +84,40 @@ html {
 }
 
 /* caixa de busca e seus compenentes*/
-.caixaBusca {
-    /* background-color: green; */
+.caixaBuscaContainer {
+    padding: 20px;
+    background-color: var(--cor-azul-primaria);
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80px;
 }
 
-.caixaBusca .row-0 {
-    /* background-color: red; */
+.caixaBusca {
+
+    outline: solid 3px cyan;
+    border-radius: 6px;
+
+    background-color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     /* justify-content: space-between; */
-    width: 500px;
-    height: 70px;
+    width: 40%;
+    height: 50px;
 
 }
 
 .caixaBusca_input {
     font-family: var(--fonte-secundaria);
     font-size: 18px;
-    margin-left: 5%;
+    margin-left: 2%;
     width: 80%;
     height: 40px;
-    border-radius: 6px;
-    outline: solid;
-    outline-width: 1px;
-    outline-color: blue;
+    /* border-radius: 6px; */
+    /* outline: solid; */
+    /* outline-width: 1px; */
+    /* outline-color: blue; */
 }
 
 .caixaBusca_button {
@@ -139,6 +146,38 @@ html {
 
 /* end */
 
+/* filtros e quadrados*/
+.conteudo {
+    background-color: orange;
+    height: 900px;
+}
+
+.conteudo_filtros {
+    background-color: var(--cor-cinza);
+    height: 100%;
+    width: 200px;
+}
+
+.type-filter {
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    padding: 15px;
+    font-style: italic;
+}
+
+.list-filter {
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.filter {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* end */
 
 .botaoContato {
     /* border: 1px solid red; */

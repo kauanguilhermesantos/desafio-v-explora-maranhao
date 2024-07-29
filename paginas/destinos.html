@@ -22,47 +22,21 @@
 <body>
     <header>
         <nav>
-            <div class="navegacao">
-                <!--Menu na primeira linha-->
-                <div class="barraDeNavegacao">
-                    <!--logo-->
-                    <a href="../../index.html"><img src="../assets/logo/logo-com-texto-explora-maranhao.png"
-                            alt="Logo do Explora Maranhão" class="logoComTexto"></a>
+            <div class="barraDeNavegacao">
+                <!--logo-->
+                <a href="../../index.html"><img src="../assets/logo/logo-com-texto-explora-maranhao.png"
+                        alt="Logo do Explora Maranhão" class="logoComTexto"></a>
 
-                    <!--caixa de busca-->
-                    <form class="caixaBusca" role="search">
-
-                        <div class="row-0">
-                            <input class="caixaBusca_input" type="search" placeholder="Search">
-                            <button class="caixaBusca_button" type="submit">Search</button>
-                        </div>
-
-                    </form>
-
-                    <!--items de menu-->
-                    <ul class="navMenu">
-                        <li class="listaMenu"><a href="../../index.html" class="botoesDoMenu">Home</a></li>
-                        <li class="listaMenu"><a href="./front-end/paginas/sobre.html" class="botoesDoMenu">Sobre</a>
-                        </li>
-                        <li class="listaMenu"><a href="../paginas/destinos.html" class="botoesDoMenu">Destinos</a></li>
-                        <li class="botaoContato"><a href="#contato">Contato</a></li>
-                        <li class="botaoContato" data-bs-toggle="modal" data-bs-target="#janelaModal"><a
-                                href="#contato">Entrar</a></li>
-                    </ul>
-
-
-                </div>
-
-                <!--Submenu na segunda linha-->
-                <div class="navSubmenu">
-                    <ul class="caixaBusca_filtros">
-                        <a href="#">Museu</a>
-                        <a href="#">Evento</a>
-                        <a href="#">Natureza</a>
-                        <a href="#">Aventura</a>
-                    </ul>
-                </div>
-
+                <!--items de menu-->
+                <ul class="navMenu">
+                    <li class="listaMenu"><a href="../../index.html" class="botoesDoMenu">Home</a></li>
+                    <li class="listaMenu"><a href="./front-end/paginas/sobre.html" class="botoesDoMenu">Sobre</a>
+                    </li>
+                    <li class="listaMenu"><a href="../paginas/destinos.html" class="botoesDoMenu">Destinos</a></li>
+                    <li class="botaoContato"><a href="#contato">Contato</a></li>
+                    <li class="botaoContato" data-bs-toggle="modal" data-bs-target="#janelaModal"><a
+                            href="#contato">Entrar</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -106,8 +80,55 @@
         </div>
     </div> <!--modal-->
 
-    <main> <!--main-->
 
+    <!--main-->
+    <main>
+        <!--banner-->
+        <div class="bannerSobre">
+            <h1>Maranhão, meu tesouro, meu torrão!</h1>
+        </div>
+        <div class="paragrafoInicialSobre">
+            <h2>Explore o Maranhão: O Destino dos Seus Sonhos Está Aqui!</h2>
+            <!--caixa de busca-->
+            <form class="caixaBuscaContainer" role="search">
+                <div class="caixaBusca">
+                    <input class="caixaBusca_input" type="search" placeholder="Search">
+                    <button class="caixaBusca_button" type="submit">Search</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!--filtros e quadrados-->
+
+        <div class="conteudo">
+            <div class="conteudo_filtros">
+
+                <div>
+                    <h4 class="type-filter">Tipo</h4>
+                    <ul class="list-filter">
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                    </ul>
+
+                    <h4 class="type-filter">Tipo</h4>
+                    <ul class="list-filter">
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                        <label class="filter"> <input type="checkbox"> Praia </label>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="conteudo_cards">
+
+            </div>
+
+        </div>
 
     </main> <!--main-->
 
