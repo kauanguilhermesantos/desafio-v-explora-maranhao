@@ -3,7 +3,7 @@ import users from "./userRoutes.js";
 
 
 const routes = (app) => {
-  app.route("/").get((req, res) => res.status(200).send("APIzona"));
+  app.route("/").get((req, res) => res.status(200).send("APIzona funcionando :)"));
   app.use(express.json(), users);
 }
 
