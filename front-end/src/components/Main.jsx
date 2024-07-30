@@ -7,26 +7,26 @@ export function Main() {
     /* < !--main-- > */
     <main>
       {/* <!--banner--> */}
-      <div class="bannerSobre">
+      <div className="bannerSobre">
         <h1>Maranhão, meu tesouro, meu torrão!</h1>
       </div>
 
-      <div class="paragrafoInicialSobre">
+      <div className="paragrafoInicialSobre">
         <h2>Explore o Maranhão: O Destino dos Seus Sonhos Está Aqui!</h2>
         <BarraBusca />
       </div>
 
       {/* < !--filtros e quadrados--> */}
 
-      <div class="conteudo">
+      <div className="conteudo">
 
-        <div class="conteudo_filtros">
+        <div className="conteudo_filtros">
 
           <Filter />
           <Filter />
 
         </div>
-        <div class="conteudo_cards">
+        <div className="conteudo_cards">
 
         </div>
 
