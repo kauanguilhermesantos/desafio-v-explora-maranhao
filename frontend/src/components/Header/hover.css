@@ -1,0 +1,32 @@
+:root {
+    font-size: 62.5%;
+    --cor-vermelha-primaria: #BF2626;
+    --cor-vermelha-secundaria: #D98282;
+    --cor-preta: #0d0d0d;
+}
+
+.listaMenu .botoesDoMenu::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--cor-vermelha-primaria);
+    margin: auto;
+    display: block;
+}
+
+.listaMenu .botoesDoMenu:hover::after {
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+.listaMenu .botoesDoMenu:hover {
+    color: var(--cor-vermelha-primaria);
+    cursor: pointer;
+}
+
+.botaoContato:hover {
+    background-color: var(--cor-vermelha-secundaria);
+    /* color: var(--cor-preta); */
+    cursor: pointer;
+    transition: 0.3s linear;
+}
