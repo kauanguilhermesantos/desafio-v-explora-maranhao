@@ -1,13 +1,13 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../config/db.js";
+import database, { DataTypes } from "../config/db.js";
+import Favorite from "./Favorites.js";
 
-const User = sequelize.define(
+const User = database.define(
   'User',
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      //  autoIncrement: true
+      autoIncrement: true
     },
     name: {
       type: DataTypes.STRING,
@@ -21,8 +21,16 @@ const User = sequelize.define(
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    userFavorites: {
+      // foreignkey
+      type: DataTypes.INTEGER,
     }
-  }
+  },
+
+  { tableName: 'users' }
 );
+
+User.belongsTo(Favorite, { foreignKey: 'userFavorites' });
 
 export default User;

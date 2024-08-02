@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize({
+const database = new Sequelize({
   host: 'localhost',
   dialect: 'sqlite',
   storage: '../../banco.sqlite'
 });
 
-export default sequelize;
+export default database;
