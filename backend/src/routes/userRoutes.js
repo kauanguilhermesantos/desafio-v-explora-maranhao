@@ -11,4 +11,4 @@ router.post('/users', (req, res) => userController.criaNovo(req, res));
 router.put('/users/:id', (req, res) => userController.atualiza(req, res));
 router.delete('/users/:id', (req, res) => userController.exclui(req, res));
 
-module.exports = router;
+export default router;

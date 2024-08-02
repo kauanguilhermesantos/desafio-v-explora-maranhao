@@ -1,4 +1,4 @@
-import Controller from './controller.js';
+import Controller from './Controller.js';
 import AtrativoServices from '../services/AtrativoServices.js'
 
 

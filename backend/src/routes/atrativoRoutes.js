@@ -11,4 +11,4 @@ router.post('/atrativos', (req, res) => atrativoController.criaNovo(req, res));
 router.put('/atrativos/:id', (req, res) => atrativoController.atualiza(req, res));
 router.delete('/atrativos/:id', (req, res) => atrativoController.exclui(req, res));
 
-module.exports = router;
+export default router;

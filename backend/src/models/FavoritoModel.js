@@ -1,6 +1,6 @@
-import database, { DataTypes } from "../config/db";
-import Atrativo from "./AtrativoModel";
-import User from "./UserModel";
+import database, { DataTypes } from "../config/db.js";
+import Atrativo from "./AtrativoModel.js";
+import User from "./UserModel.js";
 
 const Favorito = database.define('Favorite',
   {

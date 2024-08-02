@@ -1,4 +1,4 @@
-import Service from "./Services";
+import Service from "./Services.js";
 
 
 export default class FavoritoServices extends Service {
