@@ -1,5 +1,8 @@
-import express from "express";
-import users from "./userRoutes.js";
+// import express from "express";
+// import users from "./userRoutes.js";
+
+const express = require("express");
+const users = require("./userRoutes");
 
 
 const routes = (app) => {
@@ -7,4 +10,5 @@ const routes = (app) => {
   app.use(express.json(), users);
 }
 
-export default routes;
+// export default routes;
+module.exports = routes;
