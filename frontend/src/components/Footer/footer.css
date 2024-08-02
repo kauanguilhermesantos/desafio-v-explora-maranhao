@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --cor-azul-primaria: #222673;
+    --cor-vermelha-primaria: #BF2626;
+    --cor-azul-secundaria: #020873;
+    --cor-vermelha-secundaria: #D98282;
+    --cor-branca: #F2F2F2;
+    --cor-cinza: #cccccc;
+    --cor-preta: #0d0d0d;
+    --fonte-primaria: "Montserrat", sans-serif;
+    --fonte-secundaria: "Roboto", sans-serif;
+}
+
 .secaoContato {
     /* border: 1px solid red; */
     background-color: var(--cor-azul-primaria);
