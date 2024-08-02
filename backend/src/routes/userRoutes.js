@@ -1,8 +1,14 @@
-import express from "express";
+import { Router } from "express";
 import UserController from "../controllers/UserController.js";
 
-const routes = express.Router();
+const userController = new UserController();
 
-routes.get('/users', (req, res) => UserController.getAll(req, res))
+const router = Router();
 
-export default routes;
+router.get('/users', (req, res) => userController.pegaTodos(req, res));
+router.get('/users/:id', (req, res) => userController.pegaUmPorId(req, res));
+router.post('/users', (req, res) => userController.criaNovo(req, res));
+router.put('/users/:id', (req, res) => userController.atualiza(req, res));
+router.delete('/users/:id', (req, res) => userController.exclui(req, res));
+
+module.exports = router;

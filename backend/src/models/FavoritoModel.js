@@ -2,7 +2,7 @@ import database, { DataTypes } from "../config/db";
 import Atrativo from "./AtrativoModel";
 import User from "./UserModel";
 
-const Favorite = database.define('Favorite',
+const Favorito = database.define('Favorite',
   {
     UserId: {
       type: DataTypes.INTEGER,
@@ -18,7 +18,7 @@ const Favorite = database.define('Favorite',
   }
 );
 
-Favorite.hasMany(User, { foreignKey: 'UserId' });
-Favorite.hasMany(Atrativo, { foreignKey: 'AtrativoId' });
+Favorito.hasMany(User, { foreignKey: 'UserId' });
+Favorito.hasMany(Atrativo, { foreignKey: 'AtrativoId' });
 
-export default Favorite;
+export default Favorito;

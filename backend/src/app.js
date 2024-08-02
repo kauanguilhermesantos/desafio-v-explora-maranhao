@@ -1,12 +1,12 @@
 import express from "express";
 import routes from "./routes/index.js";
-import sequelize from "./config/db.js";
+import database from "./config/db.js";
 
 const app = express();
 
 // testando conexao
 try {
-  await sequelize.authenticate();
+  await database.authenticate();
   console.log('Connection has been established successfully.');
 } catch (error) {
   console.error('Unable to connect to the database:', error);

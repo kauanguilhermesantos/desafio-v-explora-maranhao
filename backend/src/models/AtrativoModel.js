@@ -1,5 +1,5 @@
 import database, { DataTypes } from "../config/db.js";
-import Favorite from "./Favorites.js";
+import Favorito from "./FavoritoModel.js";
 
 const Atrativo = database.define(
   'Atrativo',
@@ -36,6 +36,6 @@ const Atrativo = database.define(
 
 );
 
-Atrativo.belongsTo(Favorite, { foreignKey: 'id' });
+Atrativo.belongsTo(Favorito, { foreignKey: 'id' });
 
 export default Atrativo;
