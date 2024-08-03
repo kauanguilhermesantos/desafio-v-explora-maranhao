@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-
-export default class Controller {
-
-=======
 class Controller {
->>>>>>> Stashed changes
   constructor(entidadeService) {
     this.entidadeService = entidadeService;
   }
@@ -66,8 +60,5 @@ class Controller {
   }
 }
 
-<<<<<<< Updated upstream
-=======
 module.exports = Controller;
 
->>>>>>> Stashed changes

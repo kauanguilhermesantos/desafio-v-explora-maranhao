@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-import Controller from './Controller.js';
-import UserService from '../services/UserService.js'
-
-
-const userServices = new UserService();
-
-export default class UserController extends Controller {
-  constructor() {
-    super(userServices);
-  }
-}
-
-=======
 // import User from "../models/UserModel.js";
 const User = require("../models/User");
 
@@ -92,4 +78,3 @@ class UserController {
 }
 
 module.exports = UserController;
->>>>>>> Stashed changes

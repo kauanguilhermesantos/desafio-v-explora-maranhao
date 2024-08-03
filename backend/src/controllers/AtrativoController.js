@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-import Controller from './Controller.js';
-import AtrativoServices from '../services/AtrativoServices.js'
-
-
-const atrativoServices = new AtrativoServices();
-
-export default class AtrativoController extends Controller {
-  constructor() {
-    super(atrativoServices);
-  }
-}
-
-=======
 const Atrativo = require("../models/Atrativo.js");
 
 Atrativo.sync({ force: true });
@@ -33,4 +19,3 @@ class AtrativoController {
 }
 
 module.exports = AtrativoController;
->>>>>>> Stashed changes
