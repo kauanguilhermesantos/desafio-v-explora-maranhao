@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< Updated upstream
   "type": "module",
+=======
+  "type": "commonjs",
+>>>>>>> Stashed changes
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js"
