@@ -2,7 +2,7 @@ const Favorito = require("../models/Favorito.js");
 const Atrativo = require("../models/Atrativo.js");
 const squelize = require("sequelize");
 
-Favorito.afterSync('Atrativo');
+Favorito.afterSync('atrativos');
 
 class FavoritoController {
 

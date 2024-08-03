@@ -1,5 +1,8 @@
-import { Router } from "express";
-import AtrativoController from "../controllers/AtrativoController.js";
+// import { Router } from "express";
+// import AtrativoController from "../controllers/AtrativoController.js";
+
+const {Router} = require("express");
+const AtrativoController = require("../controllers/AtrativoController.js")
 
 const atrativoController = new AtrativoController();
 
