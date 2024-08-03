@@ -6,4 +6,4 @@ const database = new Sequelize({
   storage: '../../banco.sqlite'
 });
 
-export default database;
+module.exports = database;

@@ -41,4 +41,6 @@ const Atrativo = database.define(
 
 // Atrativo.belongsToMany(User, { through: 'favoritos', foreignKey: 'AtrativoId' });
 // export default Atrativo;
+
+
 module.exports = Atrativo;

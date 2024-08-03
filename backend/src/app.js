@@ -1,6 +1,6 @@
 const express = require("express");
 const routes = require("./routes/index.js");
-const database = require("./config/db.js");
+const database = require("./config/db");
 
 const app = express();
 
@@ -15,6 +15,5 @@ try {
 
 routes(app);
 
-export default app;
-
+module.exports = app;
 

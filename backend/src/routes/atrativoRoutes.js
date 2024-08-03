@@ -1,17 +1,17 @@
-// import { Router } from "express";
+// import { routes } from "express";
 // import AtrativoController from "../controllers/AtrativoController.js";
 
-const {Router} = require("express");
+const { Router } = require("express");
 const AtrativoController = require("../controllers/AtrativoController.js")
 
 const atrativoController = new AtrativoController();
 
-const router = Router();
+const routes = Router();
 
-router.get('/atrativos', (req, res) => atrativoController.pegaTodos(req, res));
-router.get('/atrativos/:id', (req, res) => atrativoController.pegaUmPorId(req, res));
-router.post('/atrativos', (req, res) => atrativoController.criaNovo(req, res));
-router.put('/atrativos/:id', (req, res) => atrativoController.atualiza(req, res));
-router.delete('/atrativos/:id', (req, res) => atrativoController.exclui(req, res));
+routes.get('/atrativos', (req, res) => atrativoController.pegaTodos(req, res));
+routes.get('/atrativos/:id', (req, res) => atrativoController.pegaUmPorId(req, res));
+routes.post('/atrativos', (req, res) => atrativoController.criaNovo(req, res));
+routes.put('/atrativos/:id', (req, res) => atrativoController.atualiza(req, res));
+routes.delete('/atrativos/:id', (req, res) => atrativoController.exclui(req, res));
 
-export default router;
+export default routes;

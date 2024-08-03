@@ -32,5 +32,7 @@ const Favorito = database.define(
   { tableName: 'favoritos' }
 );
 
+
+
 // export default Favorito;
 module.exports = Favorito;

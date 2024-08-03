@@ -11,4 +11,5 @@ const routes = (app) => {
   app.use(express.json(), users, atrativos, favoritos);
 }
 
-export default routes;
+// export default routes;
+module.exports = routes;
