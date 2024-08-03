@@ -3,7 +3,6 @@ import logoComTexto from '../../assets/logo/logo-com-texto-explora-maranhao.png'
 import '../Reset/reset.css';
 import './header.css';
 import './hover.css';
-
 export class Header extends React.Component {
     render () {
         return (
