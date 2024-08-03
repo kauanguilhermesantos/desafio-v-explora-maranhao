@@ -5,6 +5,7 @@ import { Slider } from "./components/Slider/Slider";
 import { Footer } from './components/Footer/Footer';
 
 function App() {
+  
   return (
     <>
       <Header />
