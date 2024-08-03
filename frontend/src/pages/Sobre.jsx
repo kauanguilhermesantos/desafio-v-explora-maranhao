@@ -5,7 +5,7 @@ export function Sobre() {
     return (
         <>
             <Header />
-            <Banner />
+            <Banner mensagem="Encontre aqui o destino da sua próxima aventura!" />
         </>
     )
 }
