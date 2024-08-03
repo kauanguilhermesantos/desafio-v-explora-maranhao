@@ -13,6 +13,8 @@ import applepaySvg from '../../assets/img/applepay.svg';
 import paywithgoogleSvg from '../../assets/img/paywithgoogle.svg';
 import pixPng from '../../assets/img/pix.png';
 
+import { Link } from "react-router-dom";
+
 // library.add(...all);
 export class Footer extends React.Component {
     render () {
@@ -32,9 +34,9 @@ export class Footer extends React.Component {
                         </div>
                         <div class="servicos">
                             <h3>Serviços</h3>
-                            <p><a href="../../../App.jsx">Home</a></p>
-                            <p><a href="#">Sobre</a></p>
-                            <p><a href="#">Destinos</a></p>
+                            <Link to="/">Home</Link>
+                            <Link to="/sobre">Sobre</Link>
+                            <Link to="/destinos">Destinos</Link>
                         </div>
                         <div class="formasDePagamento">
                             <h3>Formas de Pagamento</h3>
