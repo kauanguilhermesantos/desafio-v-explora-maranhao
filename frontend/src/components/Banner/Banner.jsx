@@ -3,10 +3,14 @@ import './banner.css';
 
 export class Banner extends React.Component {
     render() {
-        const {mensagem} = this.props;
+        const {mensagem, backgroundImage} = this.props;
+
+        const bannerCss = {
+            backgroundImage: `url(${backgroundImage})`,
+        }
 
         return (
-            <section class="banner">
+            <section className="banner" style={bannerCss}>
                 <h1>{mensagem}</h1>
             </section>
         )
