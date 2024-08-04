@@ -15,6 +15,10 @@ import pixPng from '../../assets/img/pix.png';
 
 import { Link } from "react-router-dom";
 
+import { FaPhone } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa6";
+
 // library.add(...all);
 export class Footer extends React.Component {
     render () {
@@ -28,9 +32,9 @@ export class Footer extends React.Component {
                             <h3>Contato</h3>
                             {/* <p>{phone}</p> */}
                             {/* // <p><FontAwesomeIcon icon={faPhone} />(98) 4002-8922</p> */}
-                            <p>(98) 4002-8922</p>
-                            <p><i class="fa-brands fa-square-whatsapp"></i>(98) 98906-6255</p>
-                            <p><i class="fa-solid fa-envelope"></i>contato@exploramaranhao.com.br</p>
+                            <p><FaPhone />(98) 4002-8922</p>
+                            <p><FaWhatsapp />(98) 98906-6255</p>
+                            <p><FaEnvelope />contato@exploramaranhao.com.br</p>
                         </div>
                         <div class="servicos">
                             <h3>Serviços</h3>

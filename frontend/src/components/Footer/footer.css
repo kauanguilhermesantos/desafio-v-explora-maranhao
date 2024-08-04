@@ -46,12 +46,19 @@
     align-items: center;
 }
 
-.fa-envelope, .fa-phone, .fa-square-whatsapp {
+.contato svg {
     /* border: 1px solid red; */
     font-size: 1.8rem;
     color: var(--cor-cinza);
     margin: 0 0.6rem 0 0;
 }
+
+/* .fa-envelope, .fa-phone, .fa-square-whatsapp {
+    border: 1px solid red;
+    font-size: 1.8rem;
+    color: var(--cor-cinza);
+    margin: 0 0.6rem 0 0;
+} */
 
 .secaoContato .formasDePagamento > div {
     /* border: 1px solid red; */
