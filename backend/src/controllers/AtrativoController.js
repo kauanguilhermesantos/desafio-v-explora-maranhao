@@ -19,7 +19,7 @@ class AtrativoController {
   static async criarAtrativo(req, res) {
     try {
       const novoAtrativo = req.body;
-      await Atrativo.create({ nome: novoAtrativo.nome, tipo: novoAtrativo.tipo })
+      await Atrativo.create({ nome: novoAtrativo.nome, tipo: novoAtrativo.tipo, descricao: novoAtrativo.descricao })
       res.status(200).json({ message: "atrativo criado" });
     } catch (error) {
       res.status(500).json({ message: `erro - ${error.message}` })
