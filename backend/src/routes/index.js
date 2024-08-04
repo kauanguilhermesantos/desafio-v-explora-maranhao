@@ -9,8 +9,8 @@ database.sync()
 
 
 const routes = (app) => {
-  app.route("/").get((req, res) => res.status(200).send("APIzona funcionando :)"));
-  app.use(express.json(), atrativos);
+  app.route("/api").get((req, res) => res.status(200).send("APIzona funcionando :)"));
+  app.use("/api", express.json(), atrativos);
 }
 
 // export default routes;

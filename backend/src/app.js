@@ -1,11 +1,13 @@
 const express = require("express");
 const routes = require("./routes/index.js");
-const database = require("./config/db.js");
-const db = require("./models");
+const bodyParser = require("body-parser");
 
+const database = require("./config/db.js");
 
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 // testando conexao
@@ -15,7 +17,6 @@ try {
 } catch (error) {
   console.error('Unable to connect to the database:', error);
 }
-
 
 
 routes(app);
