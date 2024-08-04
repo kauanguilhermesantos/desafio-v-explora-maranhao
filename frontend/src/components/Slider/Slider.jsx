@@ -1,6 +1,9 @@
 import React from "react";
 import './slider.css';
 import { CardHome } from "../CardHome/CardHome";
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+
 
 export class Slider extends React.Component {
     render() {
@@ -10,7 +13,7 @@ export class Slider extends React.Component {
                 <div class="slider-container-up">
 
                     <div class="botoesDestinosMaisProcurado">
-                        <button id="anterior"> L </button>
+                        <button id="anterior"><MdOutlineArrowBackIosNew /></button>
                     </div>
 
                     <div class="slider-wrapper">
@@ -24,7 +27,7 @@ export class Slider extends React.Component {
                     </div>
 
                     <div class="botoesDestinosMaisProcurado">
-                        <button id="proximo"> R </button>
+                        <button id="proximo"><MdOutlineArrowForwardIos /></button>
                     </div>
 
                 </div>

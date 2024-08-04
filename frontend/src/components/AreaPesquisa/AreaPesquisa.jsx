@@ -1,6 +1,7 @@
 import React from 'react';
 import "./areaPesquisa.css";
 import { FaSearch } from "react-icons/fa";
+import { CardDestino } from '../CardDestino/CardDestino';
 
 export class AreaPesquisa extends React.Component {
     render() {
@@ -50,7 +51,7 @@ export class AreaPesquisa extends React.Component {
                     </aside>
                     <div>
                         <h1>MAIN</h1>
-                        
+                        <CardDestino />
                     </div>
                 </main>
             </body>

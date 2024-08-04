@@ -69,8 +69,8 @@
   height: auto;
 }
 
-.destinosMaisProcurados .botoesDestinosMaisProcurado {
-  /* border: 1px solid red; */
+/* .destinosMaisProcurados .botoesDestinosMaisProcurado {
+  border: 1px solid red;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -78,7 +78,7 @@
   justify-content: space-between;
   transform: translateY(-50%);
   padding: 0 8rem;
-}
+} */
 
 #anterior {
   /* border: 1px solid red; */
@@ -95,10 +95,15 @@
   background-color: var(--cor-azul-secundaria);
   font-family: var(--fonte-secundaria);
   font-size: 2rem;
-  padding: 1rem 2rem;
-  margin: 1rem;
+  /* padding: 1rem 2rem; */
+  /* margin: 1rem; */
+  width: 5rem;
+  height: 5rem;
   color: var(--cor-branca);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .botoesDestinosMaisProcurado>button:hover {
