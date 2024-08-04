@@ -1,7 +1,7 @@
 import React from 'react';
 import "./areaPesquisa.css";
 import { FaSearch } from "react-icons/fa";
-import { CardDestino } from '../CardDestino/CardDestino';
+import { Card } from '../Card/Card';
 
 export class AreaPesquisa extends React.Component {
     render() {
@@ -50,8 +50,12 @@ export class AreaPesquisa extends React.Component {
                         </ul>
                     </aside>
                     <div>
-                        <h1>MAIN</h1>
-                        <CardDestino />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
                     </div>
                 </main>
             </body>

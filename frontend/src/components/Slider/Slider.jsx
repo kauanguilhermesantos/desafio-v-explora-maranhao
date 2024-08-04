@@ -1,6 +1,6 @@
 import React from "react";
 import './slider.css';
-import { CardHome } from "../CardHome/CardHome";
+import { Card } from "../Card/Card";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 
@@ -19,9 +19,9 @@ export class Slider extends React.Component {
                     <div class="slider-wrapper">
                         <div class="slider">
                         
-                            <CardHome/>
-                            <CardHome/>
-                            <CardHome/>
+                            <Card/>
+                            <Card/>
+                            <Card/>
 
                         </div>
                     </div>

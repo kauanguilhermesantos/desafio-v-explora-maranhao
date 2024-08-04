@@ -1,8 +1,8 @@
 import React from "react";
-import "./cardHome.css";
+import "./card.css";
 import imagemTeste from "../../assets/img/1.png";
 
-export class CardHome extends React.Component {
+export class Card extends React.Component {
     render() {
         return (
             <div class="cardDestinosMaisProcurados">

@@ -79,7 +79,15 @@
 
 main {
     display: flex;
-    margin: 2rem 0;
+    margin: 3rem 8rem 3rem 0;
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 aside {
@@ -94,10 +102,6 @@ aside > h3 {
     font-size: 1.8rem;
     text-align: center;
     padding: 1rem;
-}
-
-main > div {
-    border: 1px solid red;
 }
 
 .list-filter {
@@ -143,12 +147,11 @@ main > div {
 }
 
 .checkbox-custom::after {
-    content: "";
-    width: 1rem;
-    height: 1rem;
+    /* content: ""; */
     display: none;
-    background-color: var(--cor-branca);
+    /* background-color: var(--cor-branca); */
     border-radius: 0.2rem;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .filter input[type="checkbox"]:checked + .checkbox-custom::after {
