@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* import { IoIosCheckmark } from "react-icons/io" */
+
 :root {
     font-size: 62.5%;
     --cor-azul-primaria: #222673;
@@ -73,4 +75,81 @@
     /* right: 10px; */
     top: 66.9rem;
     /* transform: translateY(-50%); */
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    /* border: 1px solid red; */
+    margin-left: 8rem;
+}
+
+aside > h3 {
+    /* border: 1px solid red; */
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+main > div {
+    border: 1px solid red;
+}
+
+.list-filter {
+    padding: 0px 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.filter {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: var(--fonte-secundaria);
+    /* font-weight: 300; */
+    font-size: 1.6rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--cor-branca);
+    border: 0.2rem solid var(--cor-cinza);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filter input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: var(--cor-vermelha-primaria);
+    border-color: var(--cor-vermelha-primaria);
+}
+
+.checkbox-custom::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    display: none;
+    background-color: var(--cor-branca);
+    border-radius: 0.2rem;
+}
+
+.filter input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
 }
