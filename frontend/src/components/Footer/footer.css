@@ -85,7 +85,7 @@
     padding: 1.2rem 0;
 }
 
-.linkLinkedIn:hover, .secaoContato .servicos > p:hover {
+.linkLinkedIn:hover, .secaoContato .servicos > p:hover, .servicos a:hover {
     text-decoration: underline;
     cursor: pointer;
     color: var(--cor-vermelha-primaria);
