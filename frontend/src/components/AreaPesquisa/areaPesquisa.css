@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --cor-azul-primaria: #222673;
+    --cor-vermelha-primaria: #BF2626;
+    --cor-azul-secundaria: #020873;
+    --cor-vermelha-secundaria: #D98282;
+    --cor-branca: #F2F2F2;
+    --cor-cinza: #cccccc;
+    --cor-preta: #0d0d0d;
+    --fonte-primaria: "Montserrat", sans-serif;
+    --fonte-secundaria: "Roboto", sans-serif;
+}
+
+.caixaBuscaContainer {
+    /* border: 1px solid red; */
+    padding: 2rem;
+    background-color: var(--cor-azul-primaria);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 8rem;
+}
+
+.caixaBusca {
+    /* border: 1px solid red; */
+    /* outline: solid 0.2rem var(--cor-vermelha-primaria); */
+    /* border-radius: 2rem; */
+    /* background-color: var(--cor-branca); */
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 50%;
+    /* height: 5rem; */
+
+}
+
+.caixaBusca_input {
+    /* border: 1px solid red; */
+    outline: solid 0.2rem var(--cor-vermelha-primaria);
+    border-radius: 2rem;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.8rem;
+    /* margin-left: 2%; */
+    width: 80%;
+    /* height: 4rem; */
+    padding: 0.8rem 2rem;
+    /* border-radius: 6px; */
+    /* outline: solid; */
+    /* outline-width: 1px; */
+    /* outline-color: blue; */
+}
+
+.caixaBusca_button {
+    /* border: 1px solid red; */
+    /* margin-left: 1rem; */
+    background-color: var(--cor-vermelha-primaria);
+    color: var(--cor-branca);
+    width: 3.8rem;
+    height: 3.8rem;
+    /* font-family: var(--fonte-secundaria); */
+    font-size: 1.8rem;
+    border-radius: 0 50% 50% 0;
+    /* padding: 0.8rem; */
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0.2rem;
+    left: 99.2rem;
+    /* right: 10px; */
+    top: 66.9rem;
+    /* transform: translateY(-50%); */
+}
