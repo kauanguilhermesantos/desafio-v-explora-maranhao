@@ -1,0 +1,74 @@
+[
+  {
+    "nome": "Teatro Arthur Azevedo",
+    "tipo": "Evento",
+    "descricao": "Fundado em 1817, é um dos teatros mais antigos do Brasil. A arquitetura é deslumbrante, e a programação inclui peças de teatro, shows e eventos culturais diversos.",
+    "imagemSource": "",
+    "mapa": "",
+    "destinoId": 1
+  },
+  {
+    "nome": "Valparaiso Adventure Park",
+    "tipo": "Parque",
+    "descricao": "Vários circuitos para escalada com uma tirolesa acima das árvores, além de um parque aquático e uma praia.",
+    "imagemSource": " ",
+    "mapa": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127545.21326443463!2d-44.27285742149122!3d-2.5755620984073446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f6915c50063511%3A0x3293f613e872d390!2sValpara%C3%ADso%20Adventure%20Park!5e0!3m2!1spt-BR!2sbr!4v1722802356041!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    "destinoId": 1
+  },
+  {
+    "nome" : "Feirinha São Luís",
+    "tipo": "Evento",
+    "descricao": "A Feirinha São Luís, evento que reúne produtos agroecológicos, exposição e comercialização de artesanato, artes plásticas e literárias, gastronomia, apresentações culturais e apresentações de artistas locais, é uma oportunidade para quem quer conhecer a cultura maranhense. A programação cultural, acontece sempre aos domingos das 9h às 15h e ocupa três pontos do Centro Histórico, com apresentações musicais com artistas locais. ",
+    "imagemSource": " ",
+    "mapa" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.9330865231104!2d-44.30598512503119!3d-2.5287441974496745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68edd558f5dd3%3A0x773b4f318e4290d5!2zRmVpcmluaGEgU8OjbyBMdcOtcw!5e0!3m2!1spt-BR!2sbr!4v1722803490344!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    "destinoId": 1
+  },
+  {
+    "nome" : "Parque Nacional dos Lençóis Maranhenses",
+    "tipo": "Natureza e Aventura",
+    "descricao": "Uma visita imperdível, mesmo que envolva uma viagem de algumas horas. As dunas de areia branca e lagoas cristalinas formam um cenário único e deslumbrante. Passeios de jipe e caminhadas são populares na região.",
+    "imagemSource": " ",
+    "mapa" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0634885330724!2d-43.13098192503135!3d-2.4859384974927363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f19ee15e39be5f%3A0x2d2895d0d57e9beb!2sParque%20Nacional%20dos%20Len%C3%A7%C3%B3is%20Maranhenses!5e0!3m2!1spt-BR!2sbr!4v1722807928275!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;' allowfullscreen='' loading='lazy referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    "destinoId": 2
+  },
+  {
+    "nome" : "Reviver",
+    "tipo": "Cultura",
+    "descricao": "A área conhecida como Reviver, localizado no centro historico de São Luís, é famosa por sua vida noturna vibrante, com muitos bares, restaurantes e casas de show. Durante o dia, é um ótimo lugar para passear e explorar lojas de artesanato.",
+    "imagemSource": " ",
+    "mapa" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0634885330724!2d-43.13098192503135!3d-2.4859384974927363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f19ee15e39be5f%3A0x2d2895d0d57e9beb!2sParque%20Nacional%20dos%20Len%C3%A7%C3%B3is%20Maranhenses!5e0!3m2!1spt-BR!2sbr!4v1722805478991!5m2!1spt-BR!2sbr' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe> ",
+    "destinoId": 1
+  },
+  {
+    "nome" : "Cachoeira de Pedra Caída",
+    "tipo": "Natureza",
+    "descricao": "Uma das mais famosas da região, a Cachoeira de Pedra Caída está situada dentro de um complexo turístico que inclui trilhas, piscinas naturais e outras atividades de aventura. A cachoeira principal tem cerca de 46 metros de altura e é acessível por uma trilha curta e fácil.",
+    "imagemSource": " ",
+    "mapa" : " ",
+    "destinoId": 3
+  },
+  {
+    "nome" : "Portal da Chapada",
+    "tipo": "Natureza",
+    "descricao": " Uma formação rochosa natural que se assemelha a um portal, proporcionando uma vista deslumbrante da paisagem circundante. É um ótimo ponto para fotos e para apreciar o pôr do sol.",
+    "imagemSource": " ",
+    "mapa" : " ",
+    "destinoId": 3
+  },
+  {
+    "nome" : "Praia do Calhau",
+    "tipo": "Praia",
+    "descricao": "Conhecida por sua infraestrutura, é um ótimo lugar para relaxar e curtir o mar. Os quiosques oferecem comidas e bebidas típicas, e a faixa de areia é perfeita para caminhar.",
+    "imagemSource": " ",
+    "mapa" : " ",
+    "destinoId": 1
+  },
+  {
+    "nome" : " ",
+    "tipo": " ",
+    "descricao": "",
+    "imagemSource": " ",
+    "mapa" : " ",
+    "destinoId": " "
+  },
+]

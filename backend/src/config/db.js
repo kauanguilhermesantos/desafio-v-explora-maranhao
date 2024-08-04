@@ -1,4 +1,3 @@
-// import { Sequelize } from "sequelize";
 const { Sequelize } = require("sequelize");
 
 const database = new Sequelize({
@@ -7,5 +6,4 @@ const database = new Sequelize({
   storage: './banco.sqlite'
 });
 
-// export default database;
 module.exports = database;

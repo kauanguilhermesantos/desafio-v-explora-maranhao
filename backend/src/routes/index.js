@@ -2,12 +2,15 @@
 // import users from "./userRoutes.js";
 
 const express = require("express");
-const users = require("./userRoutes");
+const atrativos = require("./atrativoRoutes.js");
+const database = require("../config/db.js");
+
+database.sync()
 
 
 const routes = (app) => {
-  app.route("/").get((req, res) => res.status(200).send("APIzona funcionando :)"));
-  app.use(express.json(), users);
+  app.route("/api").get((req, res) => res.status(200).send("APIzona funcionando :)"));
+  app.use("/api", express.json(), atrativos);
 }
 
 // export default routes;
