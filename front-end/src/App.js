@@ -4,8 +4,8 @@ import { PageHome } from "./paginas/paginaHome";
 function App() {
   return (
     <>
-      {/* <PageDestinos /> */}
-      <PageHome />
+      <PageDestinos />
+      {/* <PageHome /> */}
 
     </>
   );
