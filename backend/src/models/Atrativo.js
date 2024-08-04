@@ -1,46 +1,39 @@
-// import { DataTypes } from "sequelize";
-// import database from "../config/db.js";
+module.exports = (sequelize, DataTypes) => {
 
-const { DataTypes } = require("sequelize");
-const database = require("../config/db");
-const Favorito = require("./Favorito");
-const User = require("./User.js");
+  const Atrativo = sequelize.define("Atrativo",
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+      },
+      nome: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      tipo: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      descricao: {
+        type: DataTypes.STRING,
+      },
+      imagemSource: {
+        type: DataTypes.TEXT,
+      },
+      mapas: {
+        type: DataTypes.TEXT,
+      },
+    },
+    { tableName: 'atrativos' }
+  );
 
-const Atrativo = database.define(
-  'Atrativo',
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    nome: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    tipo: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    descricao: {
-      type: DataTypes.STRING,
-    },
-    imagem: {
-      type: DataTypes.TEXT,
-    },
-    mapas: {
-      type: DataTypes.TEXT,
-    },
-    dicasDeVisitacao: {
-      type: DataTypes.STRING,
-    }
-  },
+  Atrativo.associate = (models) => {
+    Atrativo.belongsTo(models.Destino, { foreingKey: 'destinoId' });
+  }
 
-  { tableName: 'atrativos' }
-);
+  return Atrativo;
 
-// Atrativo.belongsToMany(User, { through: 'favoritos', foreignKey: 'AtrativoId' });
-// export default Atrativo;
+}
 
 
-module.exports = Atrativo;

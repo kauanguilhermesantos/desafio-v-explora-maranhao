@@ -1,9 +1,7 @@
-import Service from "./Services.js";
+const Services = require("./Service");
 
-
-export default class AtrativoServices extends Service {
+module.exports = class AtrativoServices extends Services {
   constructor() {
     super('Atrativo');
   }
-
 }
