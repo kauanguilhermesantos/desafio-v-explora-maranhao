@@ -20,7 +20,7 @@ class DestinoController {
   static async criarDestino(req, res) {
     try {
       const novoDestino = req.body;
-      await Destino.create({ nome: novoDestino.nome, tipo: novoDestino.tipo })
+      await Destino.create({ nome: novoDestino.nome, tipo: novoDestino.tipo, descricao: novoDestino.descricao })
       res.status(200).json({ message: "destino criado" });
     } catch (error) {
       res.status(500).json({ message: `erro - ${error.message}` })

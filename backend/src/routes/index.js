@@ -3,6 +3,7 @@
 
 const express = require("express");
 const atrativos = require("./atrativoRoutes.js");
+const destinos = require("../routes/destinoRoutes.js");
 const database = require("../config/db.js");
 
 database.sync()
@@ -10,7 +11,7 @@ database.sync()
 
 const routes = (app) => {
   app.route("/api").get((req, res) => res.status(200).send("APIzona funcionando :)"));
-  app.use("/api", express.json(), atrativos);
+  app.use("/api", express.json(), atrativos, destinos);
 }
 
 // export default routes;
