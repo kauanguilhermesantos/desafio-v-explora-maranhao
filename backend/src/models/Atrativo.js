@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
       },
       nome: {
         type: DataTypes.STRING,
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Atrativo.associate = (models) => {
-    Atrativo.hasOne(models.Destino, { foreignKey: 'destinoId', as: 'destino' });
+    Atrativo.hasOne(models.Destino, { constraint: true, foreignKey: 'destinoId' });
   }
 
   return Atrativo;

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     nome: {
       type: DataTypes.STRING,
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Destino.associate = (models) => {
-    Destino.belongsTo(models.Atrativo, { foreingKey: 'destinoId' });
+    Destino.belongsTo(models.Atrativo, { constraint: true, foreignKey: 'destinoId' });
   }
 
   return Destino;

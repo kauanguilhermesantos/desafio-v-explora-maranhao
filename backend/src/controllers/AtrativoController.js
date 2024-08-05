@@ -4,7 +4,8 @@ const { Atrativo, Destino, database } = require("../models")
 class AtrativoController {
 
   static async listarAtrativos(req, res) {
-    const atrativosEcontrados = await Atrativo.findAll();
+    const atrativosEcontrados = await Atrativo.findAll({
+    });
     res.status(200).json(atrativosEcontrados);
   }
 
