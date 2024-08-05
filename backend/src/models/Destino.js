@@ -26,9 +26,9 @@ module.exports = (sequelize, DataTypes) => {
 
   );
 
-  Destino.associate = (models) => {
-    Destino.belongsTo(models.Atrativo, { constraint: true, foreignKey: 'destinoId' });
-  }
+  // Destino.associate = (models) => {
+  //   Destino.belongsTo(models.Atrativo);
+  // }
 
   return Destino;
 

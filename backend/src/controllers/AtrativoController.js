@@ -1,11 +1,32 @@
 const { Atrativo, Destino, database } = require("../models")
 
+database.sync();
 
 class AtrativoController {
 
   static async listarAtrativos(req, res) {
+
     const atrativosEcontrados = await Atrativo.findAll({
+      include: [
+        {
+          association: 'Destino',
+          required: true
+        }
+      ]
     });
+
+    try {
+      const cousin = await database.query(`SELECT * FROM destinos JOIN atrativos ON destinos.id = atrativos.DestinoId;`);
+      console.log(cousin)
+      if (cousin != null) {
+        atrativosEcontrados = await Atrativo.findAll({
+          include: { cousin }
+        });
+      }
+    } catch (erro) {
+      console.error("no sql")
+    }
+    // console.log(typeof (cousin))
     res.status(200).json(atrativosEcontrados);
   }
 
@@ -24,7 +45,7 @@ class AtrativoController {
         descricao: novoAtrativo.descricao,
         imagemSource: novoAtrativo.imagemSource,
         mapa: novoAtrativo.mapa,
-        destinoId: novoAtrativo.destinoId
+        DestinoId: novoAtrativo.DestinoId
       })
       res.status(200).json({ message: "atrativo criado" });
     } catch (error) {

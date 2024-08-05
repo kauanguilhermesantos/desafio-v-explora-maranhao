@@ -5,7 +5,7 @@ const Destino = require("./Destino")(database, Sequelize.DataTypes);
 const Atrativo = require("./Atrativo")(database, Sequelize.DataTypes);
 
 
-Destino.associate({ Atrativo });
+// Destino.associate({ Atrativo });
 Atrativo.associate({ Destino });
 
 database.sync({ force: true }).
