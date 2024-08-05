@@ -25,7 +25,7 @@
   },
   {
     "nome" : "Parque Nacional dos Lençóis Maranhenses",
-    "tipo": "Natureza e Aventura",
+    "tipo": "Aventura",
     "descricao": "Uma visita imperdível, mesmo que envolva uma viagem de algumas horas. As dunas de areia branca e lagoas cristalinas formam um cenário único e deslumbrante. Passeios de jipe e caminhadas são populares na região.",
     "imagemSource": " ",
     "mapa" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0634885330724!2d-43.13098192503135!3d-2.4859384974927363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f19ee15e39be5f%3A0x2d2895d0d57e9beb!2sParque%20Nacional%20dos%20Len%C3%A7%C3%B3is%20Maranhenses!5e0!3m2!1spt-BR!2sbr!4v1722807928275!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;' allowfullscreen='' loading='lazy referrerpolicy='no-referrer-when-downgrade'></iframe>",
@@ -70,5 +70,5 @@
     "imagemSource": " ",
     "mapa" : " ",
     "destinoId": " "
-  },
+  }
 ]
