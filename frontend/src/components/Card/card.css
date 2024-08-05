@@ -14,67 +14,156 @@
 }
 
 .destinosMaisProcurados {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 0 8rem 3rem;
-  }
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 8rem 3rem;
+}
   
-  .infoCardDestinosMaisProcurado {
-    /* border: 1px solid red; */
-    padding: 2rem;
-  }
+.infoCardDestinosMaisProcurado {
+  /* border: 1px solid red; */
+  padding: 2rem;
+}
   
-  .infoCardDestinosMaisProcurado>div {
+.infoCardDestinosMaisProcurado>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  /* border: 1px solid red; */
+}
+  
+.NomeCardDestinoMaisProcurado {
+  /* border: 1px solid red; */
+  font-family: var(--fonte-secundaria);
+  font-size: 1.8rem;
+  font-weight: 400;
+  /* margin: 1rem; */
+  text-align: center;
+}
+  
+.cidadeCardDestinoMaisProcurado {
+  /* border: 1px solid red; */
+  font-family: var(--fonte-secundaria);
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  /* margin-bottom: 1rem; */
+}
+  
+.tipoAtrativoCardDestinoMaisProcurado {
+  /* border: 1px solid red; */
+  font-family: var(--fonte-secundaria);
+  font-size: 1.4rem;
+  /* margin: 1rem 0; */
+  padding: 0.4rem 1rem;
+  background-color: var(--cor-vermelha-primaria);
+  color: var(--cor-branca);
+  border-radius: 0.8rem;
+}
+  
+.cardDestinosMaisProcurados {
+  /* border: 1px solid red; */
+  /* margin: auto; */
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 1rem var(--cor-preta);
+  cursor: pointer;
+}
+
+/* .cardDestinosMaisProcurados:hover {
+  transition: 0.2s ease-in-out;
+} */
+  
+.imagemCardDestinoMaisProcurado {
+  /* width: 30rem; */
+  /* height: 56rem; */
+  background: no-repeat center;
+  background-size: contain;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+}
+
+  /* .container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 1.2rem;
-    /* border: 1px solid red; */
-  }
+  } */
   
-  .NomeCardDestinoMaisProcurado {
-    /* border: 1px solid red; */
-    font-family: var(--fonte-secundaria);
-    font-size: 1.8rem;
-    font-weight: 400;
-    /* margin: 1rem; */
-    text-align: center;
-  }
+.modal-overlay  {
+  /* border: 1px solid red; */
+  background: rgb(0 0 0 / .3);;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   
-  .cidadeCardDestinoMaisProcurado {
-    /* border: 1px solid red; */
-    font-family: var(--fonte-secundaria);
-    font-size: 1.4rem;
-    padding: 0 1rem;
-    /* margin-bottom: 1rem; */
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagemModal {
+  width: 50rem;
+}
+
+.botaoModal {
+  /* border: 1px solid red; */
+  font-family: var(--fonte-primaria);
+  position: relative;
+  top: 100%;
+}
   
-  .tipoAtrativoCardDestinoMaisProcurado {
-    /* border: 1px solid red; */
-    font-family: var(--fonte-secundaria);
-    font-size: 1.4rem;
-    /* margin: 1rem 0; */
-    padding: 0.4rem 1rem;
-    background-color: var(--cor-vermelha-primaria);
-    color: var(--cor-branca);
-    border-radius: 0.8rem;
-  }
+.modal-content {
+  /* border: 1px solid red; */
+  width: 90%;
+  /* max-width: 800px; */
+  /* height: 60%; */
+  background-color: var(--cor-cinza);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8rem;
+  box-shadow: 0 0 1rem rgb(0 0 0 / .6);
+}
+
+.infoModal {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-right: 5.4rem; */
+  text-align: justify;
+  line-height: 2.2rem;
+}
+
+.infoModal > h4 {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cidadeModal {
+  font-family: var(--fonte-secundaria);
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.descricaoModal {
+  font-family: var(--fonte-secundaria);
+  font-weight: 300;
+  font-size: 1.6rem;
   
-  .cardDestinosMaisProcurados {
-    /* border: 1px solid red; */
-    /* margin: auto; */
-    border-radius: 2rem;
-    box-shadow: 0.2rem 0.2rem 1rem var(--cor-preta);
-  }
-  
-  .imagemCardDestinoMaisProcurado {
-    /* width: 30rem; */
-    /* height: 56rem; */
-    background: no-repeat center;
-    background-size: contain;
-    border-radius: 2rem 2rem 0 0;
-    overflow: hidden;
-  }
-  
+}
+
+button {
+  padding: 5px;
+  font-size: large;
+  float: right;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import './slider.css';
-import { Card } from "../Card/Card";
+import Card from "../Card/Card";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 

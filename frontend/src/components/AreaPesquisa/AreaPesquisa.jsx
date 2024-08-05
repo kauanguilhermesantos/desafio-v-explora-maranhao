@@ -1,7 +1,7 @@
 import React from 'react';
 import "./areaPesquisa.css";
 import { FaSearch } from "react-icons/fa";
-import { Card } from '../Card/Card';
+import Card from '../Card/Card';
 
 export class AreaPesquisa extends React.Component {
     render() {

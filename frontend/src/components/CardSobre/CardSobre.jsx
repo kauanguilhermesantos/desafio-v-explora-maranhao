@@ -4,7 +4,7 @@ import "./cardSobre.css";
 export class CardSobre extends React.Component {
     render() {
         
-    const {titulo, texto, imagem, index} = this.props;
+    const {titulo, texto, imagem} = this.props;
 
     // const ehPar = index % 2 === 0;
 
