@@ -44,11 +44,11 @@
 .caixaBusca_input {
     /* border: 1px solid red; */
     outline: solid 0.2rem var(--cor-vermelha-primaria);
-    border-radius: 2rem;
+    border-radius: 2rem 0 0 2rem;
     font-family: var(--fonte-secundaria);
     font-size: 1.8rem;
     /* margin-left: 2%; */
-    width: 80%;
+    width: 78%;
     /* height: 4rem; */
     padding: 0.8rem 2rem;
     /* border-radius: 6px; */
@@ -61,6 +61,7 @@
     /* border: 1px solid red; */
     /* margin-left: 1rem; */
     background-color: var(--cor-vermelha-primaria);
+    outline: solid 0.2rem var(--cor-vermelha-primaria);
     color: var(--cor-branca);
     width: 3.8rem;
     height: 3.8rem;
@@ -69,11 +70,11 @@
     border-radius: 0 50% 50% 0;
     /* padding: 0.8rem; */
     cursor: pointer;
-    position: absolute;
-    margin-top: 0.2rem;
-    left: 99.2rem;
+    /* position: absolute; */
+    /* margin-top: 0.2rem; */
+    /* left: 99.2rem; */
     /* right: 10px; */
-    top: 66.9rem;
+    /* top: 66.9rem; */
     /* transform: translateY(-50%); */
 }
 
