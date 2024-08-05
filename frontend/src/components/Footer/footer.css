@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --cor-azul-primaria: #222673;
+    --cor-vermelha-primaria: #BF2626;
+    --cor-azul-secundaria: #020873;
+    --cor-vermelha-secundaria: #D98282;
+    --cor-branca: #F2F2F2;
+    --cor-cinza: #cccccc;
+    --cor-preta: #0d0d0d;
+    --fonte-primaria: "Montserrat", sans-serif;
+    --fonte-secundaria: "Roboto", sans-serif;
+}
+
+.secaoContato {
+    /* border: 1px solid red; */
+    background-color: var(--cor-azul-primaria);
+    color: var(--cor-cinza);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+}
+
+.secaoContato .contato, .secaoContato .servicos{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.secaoContato .contato > h3, .secaoContato .servicos > h3, .secaoContato .formasDePagamento > h3 {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-cinza);
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.secaoContato .contato > p, .secaoContato .servicos > p {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contato svg {
+    /* border: 1px solid red; */
+    font-size: 1.8rem;
+    color: var(--cor-cinza);
+    margin: 0 0.6rem 0 0;
+}
+
+/* .fa-envelope, .fa-phone, .fa-square-whatsapp {
+    border: 1px solid red;
+    font-size: 1.8rem;
+    color: var(--cor-cinza);
+    margin: 0 0.6rem 0 0;
+} */
+
+.secaoContato .formasDePagamento > div {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.8rem;
+    /* flex-direction: column; */
+}
+
+.secaoContato .formasDePagamento div > img {
+    /* border: 1px solid red; */
+    width: 4.4rem;
+    height: 3.3rem;
+    border-radius: 0.4rem;
+}
+
+.rodape {
+    /* border: 1px solid red; */
+    background-color: var(--cor-azul-primaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    color: var(--cor-cinza);
+    padding: 1.2rem 0;
+}
+
+.linkLinkedIn:hover, .secaoContato .servicos > p:hover, .servicos a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--cor-vermelha-primaria);
+}
