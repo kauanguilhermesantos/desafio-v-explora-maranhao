@@ -25,6 +25,13 @@ module.exports = (sequelize, DataTypes) => {
       mapa: {
         type: DataTypes.TEXT,
       },
+      destinoId: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'destinos',
+          key: 'id'
+        }
+      }
     },
     {
       tableName: 'atrativos',
