@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
 
   const Atrativo = sequelize.define("Atrativo",
@@ -16,20 +17,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       descricao: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
       },
       imagemSource: {
         type: DataTypes.TEXT,
       },
-      mapas: {
+      mapa: {
         type: DataTypes.TEXT,
       },
     },
-    { tableName: 'atrativos' }
+    {
+      tableName: 'atrativos',
+      timestamps: false
+    }
   );
 
   Atrativo.associate = (models) => {
-    Atrativo.belongsTo(models.Destino, { foreingKey: 'destinoId' });
+    Atrativo.hasOne(models.Destino, { foreignKey: 'destinoId', as: 'destino' });
   }
 
   return Atrativo;

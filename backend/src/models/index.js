@@ -10,7 +10,7 @@ Atrativo.associate({ Destino });
 
 database.sync({ force: true }).
   then(() => {
-    console.log("tabelas criadas");
+    console.log("\nBanco de dados & Tabelas criadas!!\n");
   });
 
 

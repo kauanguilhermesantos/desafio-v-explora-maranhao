@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     nome: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     descricao: {
@@ -18,11 +18,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
     }
   },
-    { tableName: 'destinos' }
+    {
+      tableName: 'destinos',
+      timestamps: false
+    },
+
   );
 
   Destino.associate = (models) => {
-    Destino.hasMany(models.Atrativo, { foreingKey: 'destinoId', as: 'destino' });
+    Destino.belongsTo(models.Atrativo, { foreingKey: 'destinoId' });
   }
 
   return Destino;

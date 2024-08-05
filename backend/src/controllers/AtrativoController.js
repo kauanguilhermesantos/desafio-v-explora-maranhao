@@ -1,7 +1,5 @@
-const AtrativoServices = require("../services/AtrativoServices.js");
-const { Atrativo } = require("../models")
+const { Atrativo, Destino, database } = require("../models")
 
-const atrativoServices = new (AtrativoServices);
 
 class AtrativoController {
 
@@ -19,7 +17,14 @@ class AtrativoController {
   static async criarAtrativo(req, res) {
     try {
       const novoAtrativo = req.body;
-      await Atrativo.create({ nome: novoAtrativo.nome, tipo: novoAtrativo.tipo })
+      await Atrativo.create({
+        nome: novoAtrativo.nome,
+        tipo: novoAtrativo.tipo,
+        descricao: novoAtrativo.descricao,
+        imagemSource: novoAtrativo.imagemSource,
+        mapa: novoAtrativo.mapa,
+        destinoId: novoAtrativo.destinoId
+      })
       res.status(200).json({ message: "atrativo criado" });
     } catch (error) {
       res.status(500).json({ message: `erro - ${error.message}` })
