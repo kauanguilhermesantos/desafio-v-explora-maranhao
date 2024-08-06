@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 
 Modal.setAppElement("#root");
 
-export default function Card() {
+export default function Card(props) {
     const [modalIsOpen, setIsOpen] = useState(false);
     const modalRef = useRef();
 
@@ -41,15 +41,15 @@ export default function Card() {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [modalIsOpen]);
-    
+
     return (
         <div className="cardDestinosMaisProcurados" onClick={openModal}>
-            <img src={imagemTeste}alt="Imagem teste" className="imagemCardDestinoMaisProcurado"/>
+            <img src={imagemTeste} alt="Imagem teste" className="imagemCardDestinoMaisProcurado" />
             <div className="infoCardDestinosMaisProcurado">
-                <p className="NomeCardDestinoMaisProcurado">Onde Judas Perdeu as Botas</p>
+                <p className="NomeCardDestinoMaisProcurado">{props.nome}</p>
                 <div>
                     <p className="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
-                    <span className="tipoAtrativoCardDestinoMaisProcurado">Perdição</span>
+                    <span className="tipoAtrativoCardDestinoMaisProcurado">{props.tipo}</span>
                 </div>
             </div>
             <Modal
@@ -58,7 +58,7 @@ export default function Card() {
                 contentLabel="Modal"
                 overlayClassName="modal-overlay"
                 className="modal-content"
-                // shouldCloseOnOverlayClick={true}
+            // shouldCloseOnOverlayClick={true}
             >
                 <div ref={modalRef}>
                     <img src={imagemTeste} alt="" className="imagemModal" />
@@ -66,7 +66,7 @@ export default function Card() {
                         <button onClick={closeModalButton} className="botaoModal">X</button>
                         <h4>Val Paraíso</h4>
                         <p className="cidadeModal">São José de Ribamar</p>
-                        <p className="descricaoModal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, numquam rerum ullam hic facere corrupti eius nisi culpa laudantium omnis cupiditate nostrum, laboriosam esse! Animi repudiandae soluta ipsam corporis aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur adipisci maxime, molestiae dignissimos sapiente libero commodi fuga reprehenderit cupiditate rem dolor tempore dicta, impedit id natus deleniti autem sit esse.</p>
+                        <p className="descricaoModal">{props.descricao}</p>
                     </div>
                 </div>
                 {/* <iframe src="" frameborder="0"></iframe> */}
