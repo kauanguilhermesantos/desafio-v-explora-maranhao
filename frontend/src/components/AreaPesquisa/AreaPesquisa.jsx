@@ -19,7 +19,10 @@ export default function AreaPesquisa() {
     const [atrativos, setAtrativo] = useState([]);
     // checkbox-verification
     const [isChecked, setIsChecked] = useState(false);
-
+    // barra busca
+    const [busca, setBusca] = useState('');
+    // click
+    const [isClicked, setIsClicked] = useState(false)
 
     async function getAtrativos() {
         const atrativosFromApi = await api.get("/atrativos");
@@ -35,7 +38,7 @@ export default function AreaPesquisa() {
     const Filtro = ({ tipo }) => {
         return (
             <label className="filter" id="filtro">
-                <input type="checkbox" checked={isChecked} onChange={"colocar uma funcao aq !!!"} />
+                <input type="checkbox" checked={isChecked} onChange={ev => setIsChecked(ev.currentTarget.value)} />
                 <span class="checkbox-custom"></span>
                 {tipo}
             </label>
@@ -43,12 +46,27 @@ export default function AreaPesquisa() {
     }
     // mexendo end
 
+
+    const atrativosFiltrados = atrativos.filter(atrativo => atrativo.nome.toLowerCase().startsWith(busca.toLowerCase()));
+
+
     return (
         <body>
             <form className="caixaBuscaContainer" role="search">
                 <div className="caixaBusca">
-                    <input className="caixaBusca_input" type="search" placeholder="Pesquisar..." />
-                    <button className="caixaBusca_button" type="submit"><FaSearch /></button>
+                    <input
+                        className="caixaBusca_input"
+                        type="search"
+                        placeholder="Pesquisar..."
+                        value={busca}
+                        onChange={ev => setBusca(ev.target.busca)}
+                    />
+                    <button
+                        className="caixaBusca_button"
+                        type="button"
+                        onClick={ev => setIsClicked(true)}>
+                        <FaSearch />
+                    </button>
                 </div>
             </form>
             <main>
@@ -67,12 +85,10 @@ export default function AreaPesquisa() {
                 <div>
 
                     { // cards dinamicos
-                        atrativos.map((props, key) =>
+                        atrativosFiltrados.map((props, key) =>
                             <Card nome={props.nome} tipo={props.tipo} descricao={props.descricao} />
                         )
-
                     }
-
                 </div>
             </main>
         </body>
