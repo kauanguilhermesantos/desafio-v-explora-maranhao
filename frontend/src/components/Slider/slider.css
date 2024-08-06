@@ -52,10 +52,54 @@
 .slider {
   /* border: 1px solid red; */
   /* background-color: green; */
-  display: flex;
-  transition: transform 0.5s ease;
+  margin: 3rem 8rem;
+  /* padding: 2rem 0; */
+  /* display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  align-items: center; */
+}
+
+.cardSlider {
+  /* border: 1px solid red; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin: 0; */
+  margin: 0.9rem 0 4rem 5rem;
+  /* padding-left: 5rem; */
+}
+/* 
+.pontinhosSlider .swiper-pagination-bullet {
+  background-color: var(--cor-vermelha-primaria); Cor dos bullets
+  opacity: 1;
+} */
+
+.styleSlider .swiper-pagination {
+  margin-top: 40rem;
+}
+
+.styleSlider .swiper-pagination-bullet-active {
+  background-color: var(--cor-azul-primaria); /* Cor do bullet ativo */
+}
+
+.styleSlider .swiper-pagination-bullet:hover {
+  background-color: var(--cor-azul-primaria); /* Cor do bullet ao passar o mouse */
+  opacity: 0.6;
+}
+
+.styleSlider .swiper-button-next,
+.styleSlider .swiper-button-prev {
+    color: var(--cor-azul-primaria); /* Cor dos botões */
+}
+
+.styleSlider .swiper-button-next:hover,
+.styleSlider .swiper-button-prev:hover {
+    color: var(--cor-azul-primaria); /* Cor dos botões ao passar o mouse */
+    opacity: 0.8;
+}
+
+.styleSlider .swiper-button-next::after,
+.styleSlider .swiper-button-prev::after {
+    font-size: 4rem; 
 }
 
 .cardDestinosMaisProcurados {
@@ -80,14 +124,14 @@
   padding: 0 8rem;
 } */
 
-#anterior {
-  /* border: 1px solid red; */
+/* #anterior {
+  border: 1px solid red;
   margin-left: 8rem;
 }
 
 #proximo {
   margin-right: 8rem;
-}
+} */
 
 .botoesDestinosMaisProcurado>button {
   /* border: 1px solid red; */
