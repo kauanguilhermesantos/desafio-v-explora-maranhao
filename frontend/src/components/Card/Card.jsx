@@ -64,10 +64,13 @@ export default function Card(props) {
                     <img src={imagemTeste} alt="" className="imagemModal" />
                     <div className="infoModal">
                         <button onClick={closeModalButton} className="botaoModal">X</button>
-                        <h4>Val Paraíso</h4>
+                        <h4>{props.nome}</h4>
                         <p className="cidadeModal">São José de Ribamar</p>
                         <p className="descricaoModal">{props.descricao}</p>
                     </div>
+                </div>
+                <div className="mapaModal">
+                    <iframe width="2000" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=700&amp;height=200&amp;hl=en&amp;q=R.%20Principal%20da%20Pindoba,%203%20-%20Pindoba,%20Pa%C3%A7o%20do%20Lumiar%20-%20MA+(Valpara%C3%ADso%20Adventure%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe>
                 </div>
                 {/* <iframe src="" frameborder="0"></iframe> */}
             </Modal>

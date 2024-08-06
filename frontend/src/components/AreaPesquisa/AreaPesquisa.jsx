@@ -26,7 +26,7 @@ export default function AreaPesquisa() {
 
     async function getAtrativos() {
         const atrativosFromApi = await api.get("/atrativos");
-        // console.log(atrativosFromApi.data);
+        console.log(atrativosFromApi.data);
         setAtrativo(atrativosFromApi.data);
     }
 
@@ -38,7 +38,9 @@ export default function AreaPesquisa() {
     const Filtro = ({ tipo }) => {
         return (
             <label className="filter" id="filtro">
-                <input type="checkbox" checked={isChecked} onChange={ev => setIsChecked(ev.currentTarget.value)} />
+                <input type="checkbox" 
+                // checked={isChecked} onChange={ev => setIsChecked(ev.currentTarget.value)} 
+                />
                 <span class="checkbox-custom"></span>
                 {tipo}
             </label>
@@ -64,7 +66,8 @@ export default function AreaPesquisa() {
                     <button
                         className="caixaBusca_button"
                         type="button"
-                        onClick={ev => setIsClicked(true)}>
+                        // onClick={ev => setIsClicked(true)}
+                        >
                         <FaSearch />
                     </button>
                 </div>

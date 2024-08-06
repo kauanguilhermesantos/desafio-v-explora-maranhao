@@ -131,6 +131,10 @@
   width: 50rem;
 }
 
+.mapaModal {
+  border: 1px solid red;
+}
+
 .botaoModal {
   /* border: 1px solid red; */
   font-family: var(--fonte-primaria);

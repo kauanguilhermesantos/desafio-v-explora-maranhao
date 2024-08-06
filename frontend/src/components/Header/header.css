@@ -56,3 +56,114 @@ html {
     padding: 0.8rem 1rem;
     border-radius: 2rem;
 }
+
+/* Telas grandes (4K) */
+@media (min-width: 2560px) {
+    :root {
+        font-size: 75%; /* Aumenta a base do tamanho da fonte */
+    }
+
+    .barraDeNavegacao {
+        padding: 0.8rem 16rem;
+    }
+
+    .logoComTexto {
+        width: 40rem;
+    }
+
+    .navMenu {
+        font-size: 2rem;
+        gap: 2rem;
+    }
+
+    .botaoContato {
+        padding: 1rem 1.2rem;
+    }
+}
+
+/* Notebooks */
+@media (max-width: 1440px) {
+    .barraDeNavegacao {
+        padding: 0.4rem 6rem;
+    }
+
+    .logoComTexto {
+        width: 25rem;
+    }
+
+    .navMenu {
+        font-size: 1.6rem;
+        gap: 1.2rem;
+    }
+
+    .botaoContato {
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .barraDeNavegacao {
+        padding: 0.4rem 4rem;
+    }
+
+    .logoComTexto {
+        width: 20rem;
+    }
+
+    .navMenu {
+        font-size: 1.4rem;
+        gap: 1rem;
+    }
+
+    .botaoContato {
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .barraDeNavegacao {
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        padding: 0.8rem 2rem;
+    }
+
+    .logoComTexto {
+        width: 18rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .navMenu {
+        font-size: 1.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .botaoContato {
+        padding: 0.6rem 0.8rem;
+        border-radius: 1.5rem;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 576px) {
+    .barraDeNavegacao {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .logoComTexto {
+        width: 15rem;
+    }
+
+    .navMenu {
+        font-size: 1.2rem;
+        gap: 0.6rem;
+    }
+
+    .botaoContato {
+        padding: 0.5rem 0.6rem;
+        border-radius: 1rem;
+    }
+}
