@@ -60,6 +60,7 @@
     /* height: 30rem; */
     border-radius: 1rem;
     box-shadow: 0.1rem 0.1rem 0.4rem var(--cor-preta);
+    object-fit: cover;
 }
 
 .chamadaSobre>div {
