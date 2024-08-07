@@ -89,7 +89,7 @@ export default function AreaPesquisa() {
 
                     { // cards dinamicos
                         atrativosFiltrados.map((props, key) =>
-                            <Card nome={props.nome} tipo={props.tipo} descricao={props.descricao} />
+                            <Card nome={props.nome} tipo={props.tipo} descricao={props.descricao} cidade={props.cidade} />
                         )
                     }
                 </div>

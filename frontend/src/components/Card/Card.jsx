@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.css";
-import imagemTeste from "../../assets/img/1.png";
+// import imagemTeste from "../../assets/img/1.png";
 import Modal from "react-modal";
 import { useState, useEffect, useRef } from "react";
 
@@ -44,11 +44,11 @@ export default function Card(props) {
 
     return (
         <div className="cardDestinosMaisProcurados" onClick={openModal}>
-            <img src={imagemTeste} alt="Imagem teste" className="imagemCardDestinoMaisProcurado" />
+            <img src={props.imagemSource} alt="Imagem teste" className="imagemCardDestinoMaisProcurado" />
             <div className="infoCardDestinosMaisProcurado">
                 <p className="NomeCardDestinoMaisProcurado">{props.nome}</p>
                 <div>
-                    <p className="cidadeCardDestinoMaisProcurado">Cidade Invisível</p>
+                    <p className="cidadeCardDestinoMaisProcurado">{props.cidade}</p>
                     <span className="tipoAtrativoCardDestinoMaisProcurado">{props.tipo}</span>
                 </div>
             </div>
@@ -61,11 +61,11 @@ export default function Card(props) {
             // shouldCloseOnOverlayClick={true}
             >
                 <div ref={modalRef}>
-                    <img src={imagemTeste} alt="" className="imagemModal" />
+                    <img src={props.imagemSource} alt="" className="imagemModal" />
                     <div className="infoModal">
                         <button onClick={closeModalButton} className="botaoModal">X</button>
                         <h4>{props.nome}</h4>
-                        <p className="cidadeModal">São José de Ribamar</p>
+                        <p className="cidadeModal">{props.cidade}</p>
                         <p className="descricaoModal">{props.descricao}</p>
                     </div>
                 </div>
