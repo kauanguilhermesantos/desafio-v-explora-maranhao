@@ -17,20 +17,12 @@ export default function AreaPesquisa() {
     const [atrativos, setAtrativo] = useState([]);
     // barra busca
     const [busca, setBusca] = useState('');
-    //
-    // const [selectedFilters, setSelectedFilters] = useState([]);
+    // filters
+    const [selectedFilters, setSelectedFilters] = useState([]);
     // const [atrativosComFiltro, setAtrativosComFiltro] = useState(atrativos);
-    //
-    // const handleFilterButtonClick = (selectedType) => {
-    //     if (selectedFilters.includes(selectedType)) {
-    //         let filters = selectedFilters.filter(el => el !== selectedType);
-    //         setSelectedFilters(filters);
-    //     } else {
-    //         setSelectedFilters([...selectedFilters, selectedType]);
-    //     }
-    //
-    // }
 
+
+    // function para pegar resultado da requisição da api
     async function getAtrativos() {
         const atrativosFromApi = await api.get("/atrativos");
         console.log(atrativosFromApi.data);
@@ -39,37 +31,40 @@ export default function AreaPesquisa() {
 
     useEffect(() => {
         getAtrativos();
-        // filterAtrativos();
-    }, [/* selectedFilters */]);
+    }, [selectedFilters]);
 
 
-    // const filterAtrativos = () => {
-    //     if (selectedFilters.length > 0) {
-    //         let tempAtrativos = selectedFilters.map(selectedCategory => {
-    //             let temp = atrativosFiltrados.filter(atrativo => atrativo.tipo === selectedCategory);
-    //             return temp;
-    //         });
-    //         setAtrativosComFiltro(tempAtrativos.flat());
-    //     } else {
-    //         setAtrativosComFiltro([...atrativosFiltrados])
-    //     }
-    // }
+    const handleCheckboxChange = (category) => {
+        setSelectedFilters((prevSelectedFilters) =>
+            prevSelectedFilters.includes(category)
+                ? prevSelectedFilters.filter((c) => c !== category)
+                : [...prevSelectedFilters, category]
+        );
+    };
+
+
+    const atrativosFiltrados = atrativos.filter(atrativo => atrativo.nome.toLowerCase().includes(busca.toLowerCase()));
+
+    const filteredItems = atrativosFiltrados.filter((item) =>
+        selectedFilters.length === 0 || selectedFilters.includes(item.tipo)
+    );
+
 
     // componente filtro
     const Filtro = ({ tipo }) => {
         return (
             <label className="filter">
-                <input type="checkbox" /* onClick={() => handleFilterButtonClick(tipo)} */ />
+                <input
+                    type="checkbox"
+                    value={tipo}
+                    onChange={() => handleCheckboxChange(tipo)}
+                />
                 <span class="checkbox-custom"></span>
                 {tipo}
             </label>
         )
     }
 
-    // mexendo end
-
-
-    const atrativosFiltrados = atrativos.filter(atrativo => atrativo.nome.toLowerCase().includes(busca.toLowerCase()));
 
 
     return (
@@ -77,16 +72,19 @@ export default function AreaPesquisa() {
             <form className="caixaBuscaContainer" role="search">
                 <div className="caixaBusca">
                     <input
+                        id="conteudo-busca"
                         className="caixaBusca_input"
                         type="search"
                         placeholder="Pesquisar..."
-                        value={busca}
-                        onChange={ev => setBusca(ev.target.value)}
                     />
                     <button
                         className="caixaBusca_button"
                         type="button"
-                        onClick={ev => setBusca(ev.target.value)}
+                        onClick={() => {
+                            const searchContent = document.getElementById('conteudo-busca').value;
+                            // console.log(searchContent);
+                            setBusca(searchContent);
+                        }}
                     >
                         <FaSearch />
                     </button>
@@ -98,8 +96,8 @@ export default function AreaPesquisa() {
                     <ul className="list-filter">
 
                         { // filtros
-                            tiposFiltros.map((filtro, key) =>
-                                <Filtro tipo={filtro} key={key} />
+                            tiposFiltros.map((tipoFiltro, key) =>
+                                <Filtro tipo={tipoFiltro} key={key} />
                             )
                         }
 
@@ -107,7 +105,7 @@ export default function AreaPesquisa() {
                 </aside>
                 <div>
                     { // cards dinamicos
-                        atrativosFiltrados.map((props, key) =>
+                        filteredItems.map((props, key) =>
                             <Card key={key} nome={props.nome} tipo={props.tipo} descricao={props.descricao} cidade={props.cidade} />
                         )
                     }
