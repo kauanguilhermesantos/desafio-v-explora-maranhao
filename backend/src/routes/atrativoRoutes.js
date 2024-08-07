@@ -8,7 +8,7 @@ routes.post("/atrativos", (req, res) => AtrativoController.criarAtrativo(req, re
 routes.get("/atrativos/:id", (req, res) => AtrativoController.listarAtrativoById(req, res));
 routes.put("/atrativos/:id", (req, res) => AtrativoController.atualizarNomePorId(req, res));
 routes.put("/atrativos/:id", (req, res) => AtrativoController.atualizarDescricaoPorId(req, res));
-
+routes.delete("/atrativos/:id", (req, res) => AtrativoController.deletarAtrativoById(req, res));
 
 module.exports = routes;
 
