@@ -68,7 +68,7 @@ export default function Card(props) {
             // shouldCloseOnOverlayClick={true}
             >
                 <div ref={modalRef}>
-                    <img src={props.imagemSource} alt="imagem atrativo" className="imagemModal" />
+                    <img src={props.imagemSource.url} alt="imagem atrativo" className="imagemModal" />
                     {console.log(props.imagemSource)}
                     <div className="infoModal">
                         <button onClick={closeModalButton} className="botaoModal">X</button>
