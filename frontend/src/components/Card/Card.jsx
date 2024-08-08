@@ -78,6 +78,7 @@ export default function Card(props) {
                     </div>
                 </div>
 
+
                 <div className="mapaModal" id="mapaIframe">
                     {parse(props.mapa)}
                     {/* <iframe width="2000" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={props.mapa}><a href="https://www.gps.ie/">gps devices</a></iframe> */}
