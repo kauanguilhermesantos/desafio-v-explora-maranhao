@@ -18,6 +18,7 @@ html {
 }
 
 .barraDeNavegacao {
+    /* border: 1px solid red; */
     width: 100%;
     background-color: var(--cor-branca);
     display: flex;
@@ -57,113 +58,73 @@ html {
     border-radius: 2rem;
 }
 
-/* Telas grandes (4K) */
-@media (min-width: 2560px) {
-    :root {
-        font-size: 75%; /* Aumenta a base do tamanho da fonte */
-    }
+button.menuToggle {
+    /* border: 1px solid red; */
+    padding: 1rem 0 0 0;
+}
 
-    .barraDeNavegacao {
-        padding: 0.8rem 16rem;
-    }
+.menuToggle {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    color: var(--cor-azul-primaria);
+    background: none;
+    /* border: none; */
+    cursor: pointer;
+}
 
+.menuToggle svg:hover {
+    color: var(--cor-vermelha-primaria);
+    transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 834px) {
     .logoComTexto {
-        width: 40rem;
-    }
-
-    .navMenu {
-        font-size: 2rem;
-        gap: 2rem;
-    }
-
-    .botaoContato {
-        padding: 1rem 1.2rem;
+        width: 6rem;
+        margin: 1.2rem 0;
     }
 }
 
-/* Notebooks */
-@media (max-width: 1440px) {
-    .barraDeNavegacao {
-        padding: 0.4rem 6rem;
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
     }
 
-    .logoComTexto {
-        width: 25rem;
+    .barraDeNavegacao {
+        padding: 0.4rem 2rem 0.4rem 2rem;
     }
 
     .navMenu {
-        font-size: 1.6rem;
-        gap: 1.2rem;
-    }
-
-    .botaoContato {
-        padding: 0.6rem 0.8rem;
-    }
-}
-
-/* Tablets */
-@media (max-width: 992px) {
-    .barraDeNavegacao {
-        padding: 0.4rem 4rem;
-    }
-
-    .logoComTexto {
-        width: 20rem;
-    }
-
-    .navMenu {
-        font-size: 1.4rem;
-        gap: 1rem;
-    }
-
-    .botaoContato {
-        padding: 0.6rem 0.8rem;
-    }
-}
-
-/* Celulares */
-@media (max-width: 768px) {
-    .barraDeNavegacao {
-        /* flex-direction: column; */
-        /* align-items: flex-start; */
-        padding: 0.8rem 2rem;
-    }
-
-    .logoComTexto {
-        width: 18rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .navMenu {
-        font-size: 1.4rem;
+        /* border: 1px solid red; */
+        /* display: none; */
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50vh;
+        height: 90vh;
+        background-color: var(--cor-azul-primaria);
+        color: var(--cor-branca);
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
+        align-items: center;
+        justify-content: space-around;
+        /* gap: 1rem; */
+        padding: 10rem 0 30rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    
+    .navMenu.ativo {
+        transform: translateX(0);
     }
 
-    .botaoContato {
-        padding: 0.6rem 0.8rem;
-        border-radius: 1.5rem;
-    }
-}
-
-/* Celulares pequenos */
-@media (max-width: 576px) {
-    .barraDeNavegacao {
-        padding: 0.8rem 1.2rem;
+    .menuToggle {
+        display: block;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
     }
 
-    .logoComTexto {
-        width: 15rem;
-    }
-
-    .navMenu {
-        font-size: 1.2rem;
-        gap: 0.6rem;
-    }
-
-    .botaoContato {
-        padding: 0.5rem 0.6rem;
-        border-radius: 1rem;
+    .menuToggle.roda {
+        transform: rotate(90deg);
     }
 }
