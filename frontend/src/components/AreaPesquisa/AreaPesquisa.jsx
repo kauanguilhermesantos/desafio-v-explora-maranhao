@@ -106,7 +106,15 @@ export default function AreaPesquisa() {
                 <div>
                     { // cards dinamicos
                         filteredItems.map((props, key) =>
-                            <Card key={key} nome={props.nome} tipo={props.tipo} descricao={props.descricao} cidade={props.cidade} />
+                            <Card
+                                key={key}
+                                nome={props.nome}
+                                tipo={props.tipo}
+                                descricao={props.descricao}
+                                cidade={props.cidade}
+                                mapa={props.mapa}
+                                imagem={props.imagemSource}
+                            />
                         )
                     }
                 </div>

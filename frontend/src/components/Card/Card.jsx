@@ -2,11 +2,17 @@ import React from "react";
 import "./card.css";
 // import imagemTeste from "../../assets/img/1.png";
 import Modal from "react-modal";
+import parse from "html-react-parser"
 import { useState, useEffect, useRef } from "react";
+
 
 Modal.setAppElement("#root");
 
 export default function Card(props) {
+
+
+    const imagemCard = props.imagemSource
+
     const [modalIsOpen, setIsOpen] = useState(false);
     const modalRef = useRef();
 
@@ -42,6 +48,7 @@ export default function Card(props) {
         };
     }, [modalIsOpen]);
 
+
     return (
         <div className="cardDestinosMaisProcurados" onClick={openModal}>
             <img src={props.imagemSource} alt="Imagem teste" className="imagemCardDestinoMaisProcurado" />
@@ -61,7 +68,8 @@ export default function Card(props) {
             // shouldCloseOnOverlayClick={true}
             >
                 <div ref={modalRef}>
-                    <img src={props.imagemSource} alt="" className="imagemModal" />
+                    <img src={props.imagemSource} alt="imagem atrativo" className="imagemModal" />
+                    {console.log(props.imagemSource)}
                     <div className="infoModal">
                         <button onClick={closeModalButton} className="botaoModal">X</button>
                         <h4>{props.nome}</h4>
@@ -69,8 +77,10 @@ export default function Card(props) {
                         <p className="descricaoModal">{props.descricao}</p>
                     </div>
                 </div>
-                <div className="mapaModal">
-                    <iframe width="2000" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={props.mapa}><a href="https://www.gps.ie/">gps devices</a></iframe>
+
+                <div className="mapaModal" id="mapaIframe">
+                    {parse(props.mapa)}
+                    {/* <iframe width="2000" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={props.mapa}><a href="https://www.gps.ie/">gps devices</a></iframe> */}
                 </div>
                 {/* <iframe src="" frameborder="0"></iframe> */}
             </Modal>
