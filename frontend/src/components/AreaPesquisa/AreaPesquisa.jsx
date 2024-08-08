@@ -113,7 +113,7 @@ export default function AreaPesquisa() {
                                 descricao={props.descricao}
                                 cidade={props.cidade}
                                 mapa={props.mapa}
-                                imagemSource={props.imagemSource}
+                                imagem={props.imagemSource}
                             />
                         )
                     }
