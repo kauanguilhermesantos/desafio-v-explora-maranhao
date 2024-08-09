@@ -40,24 +40,25 @@ export function Slider() {
 
     console.clear();
 
-    const cards = Array.from({ length: 7 }, (_, index) => (
+
+    // const cards = Array.from({ length: 7 }, (_, index) => (
+    const cards = atrativos.slice(0, 7).map((atrativo, key) => (
         < CardSlider
-            key={index}
-            nome={atrativos[index].nome}
-            tipo={atrativos[index].tipo}
-            imagemSource={atrativos[index].imagemSource}
+            key={key}
+            nome={atrativo.nome}
+            tipo={atrativo.tipo}
+            imagemSource={atrativo.imagemSource}
         />
     ));
 
-
+    // console.log(atrativos);
+    // console.log(atrativos[1].nome);
+    // console.log(atrativos[1].nome);
 
 
     // const cards = atrativos.slice(0, 4).forEach((atrativo) => {
     //     <CardSlider />
     // });
-    //
-    // console.log(atrativos[1].nome)
-    // console.log(cards)
 
 
 

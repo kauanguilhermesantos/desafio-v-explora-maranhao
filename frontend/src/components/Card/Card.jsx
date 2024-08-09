@@ -11,8 +11,6 @@ Modal.setAppElement("#root");
 export default function Card(props) {
 
 
-    const imagemCard = props.imagemSource
-
     const [modalIsOpen, setIsOpen] = useState(false);
     const modalRef = useRef();
 
