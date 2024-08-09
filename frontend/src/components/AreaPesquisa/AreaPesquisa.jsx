@@ -58,6 +58,7 @@ export default function AreaPesquisa() {
                     type="checkbox"
                     value={tipo}
                     onChange={() => handleCheckboxChange(tipo)}
+                    checked={selectedFilters.includes(tipo)}
                 />
                 <span class="checkbox-custom"></span>
                 {tipo}
