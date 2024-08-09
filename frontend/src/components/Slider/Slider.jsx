@@ -38,9 +38,10 @@ export function Slider() {
     }, [])
 
 
+    console.clear();
 
     const cards = Array.from({ length: 7 }, (_, index) => (
-        <CardSlider
+        < CardSlider
             key={index}
             nome={atrativos[index].nome}
             tipo={atrativos[index].tipo}
@@ -49,12 +50,15 @@ export function Slider() {
     ));
 
 
-    console.clear();
+
 
     // const cards = atrativos.slice(0, 4).forEach((atrativo) => {
     //     <CardSlider />
     // });
     //
+    // console.log(atrativos[1].nome)
+    // console.log(cards)
+
 
 
     return (
