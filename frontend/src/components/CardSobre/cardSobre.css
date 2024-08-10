@@ -94,3 +94,96 @@
 .chamadaSobre>div>p>strong {
     color: var(--cor-vermelha-primaria);
 }
+
+@media (max-width: 1440px) {
+    .textoSobre {
+        /* border: 1px solid red; */
+        display: flex;
+        margin: 0 5rem 0 10rem;
+    }
+    
+    .chamadaSobre {
+        /* border: 1px solid red; */
+        margin: 2rem 10rem;
+    }
+}
+
+@media (max-width: 834px) {
+    .textoSobre {
+        margin: 0 4rem;
+    }
+
+    .chamadaSobre {
+        /* border: 1px solid red; */
+        flex-direction: column;
+        margin: 2rem 7rem;
+        padding: 2rem;
+    }
+
+    .chamadaSobre>img {
+        width: 50rem;
+        /* height: 30rem; */
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    .chamadaSobre>div {
+        /* border: 1px solid red; */
+        
+        margin: 0rem 1rem 1rem ;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .textoSobre {
+        /* border: 1px solid red; */
+        margin: 0 2rem;
+    }
+
+    .chamadaSobre {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem 0 ;
+        padding: 2rem;
+    }
+
+    .chamadaSobre>img {
+        width: 31rem;
+        box-shadow: 0.1rem 0.1rem 0.4rem var(--cor-preta);
+        object-fit: cover;
+    }
+
+    .chamadaSobre>div {
+        /* border: 1px solid red; */
+        margin: 0rem 1rem 1rem ;
+        /* margin-bottom: 1rem; */
+    }
+}
+
+@media (max-width: 400px) {
+    .textoSobre {
+        /* border: 1px solid red; */
+        margin: 0 1rem;
+    }
+
+    .chamadaSobre {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem 0 ;
+        padding: 2rem;
+    }
+
+    .chamadaSobre>img {
+        width: 28rem;
+    }
+
+    .chamadaSobre>div {
+        /* border: 1px solid red; */
+        
+        margin: 0rem 1rem 1rem ;
+
+    }
+}
