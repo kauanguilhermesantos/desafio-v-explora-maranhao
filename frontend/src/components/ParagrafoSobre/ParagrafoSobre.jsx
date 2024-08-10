@@ -9,7 +9,7 @@ export class ParagrafoSobre extends React.Component {
         return (
             <div class="paragrafoSobre">
                 <h2>{titulo}</h2>
-                <p dangerouslySetInnerHTML={{ __html: texto }}></p>
+                <p>{texto}</p>
             </div>
         )
     }

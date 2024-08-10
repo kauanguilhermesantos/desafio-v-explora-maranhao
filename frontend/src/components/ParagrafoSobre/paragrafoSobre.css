@@ -20,3 +20,25 @@
     /* margin: 1.8rem 0; */
     color: var(--cor-cinza);
 }
+
+@media (max-width: 1440px) {
+    .paragrafoSobre>p {
+        padding: 1.2rem 7rem;
+    }
+}
+
+@media (max-width: 834px) {
+    .paragrafoSobre>p {
+        padding: 1.2rem 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paragrafoSobre>h2 {
+        margin: 3rem 1.2rem;
+    }
+
+    .paragrafoSobre>p {
+        padding: 1.2rem 2rem;
+    }
+}

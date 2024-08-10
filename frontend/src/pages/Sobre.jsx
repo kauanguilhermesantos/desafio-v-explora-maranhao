@@ -20,7 +20,7 @@ export function Sobre() {
             <Banner mensagem="Maranhão, meu tesouro, meu torrão!" 
             backgroundImage={imgBannerSobre} />
             <ParagrafoSobre titulo="Explore o Maranhão: O Destino dos Seus Sonhos Está Aqui!"
-            texto="O Maranhão é mais do que um destino. É uma oportunidade de viver uma experiência incrível que você vai querer compartilhar <br/> com todos. Não fique de fora dessa, venha para o Maranhão e descubra um mundo de possibilidades!" />
+            texto="O Maranhão é mais do que um destino. É uma oportunidade de viver uma experiência incrível que você vai querer compartilhar com todos. Não fique de fora dessa, venha para o Maranhão e descubra um mundo de possibilidades!" />
             <CardSobre titulo="Aventura, Cultura e Beleza Natural Esperam Por Você no Maranhão!" 
             texto="Procurando uma viagem fora do comum? O Maranhão oferece <strong>belezas naturais</strong> deslumbrantes, rica <strong>cultura</strong> e sabores irresistíveis, prometendo transformar suas férias em uma <strong>experiência inesquecível</strong>." 
             imagem={imagem1}/>
@@ -45,7 +45,7 @@ export function Sobre() {
             <CardSobre titulo="Não Perca a Oportunidade de Explorar o Maranhão!"
             texto="repare suas malas e comece a planejar uma <strong>viagem inesquecível</strong> ao Maranhão. Com braços abertos e corações calorosos, o Maranhão está pronto para <strong>recebê-lo</strong>. A experiência dos seus <strong>sonhos</strong> está ao seu alcance!"
             imagem={imagem8}/> 
-            <ParagrafoSobre texto="A aventura está te chamando, e ela começa no Maranhão! <br/> Explore, Experimente e Encante-se com o Maranhão!" />
+            <ParagrafoSobre texto="A aventura está te chamando, e ela começa no Maranhão! Explore, Experimente e Encante-se com o Maranhão!" />
             <Footer />
         </>
     )
