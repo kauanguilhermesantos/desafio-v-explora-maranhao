@@ -110,10 +110,27 @@
     }
 
     .formasDePagamento > div {
-        /* display: flex; */
+        /* border: 1px solid red; */
+        display: flex;
         /* justify-content: center; */
-        grid-template-columns: repeat(2, 1fr);
         align-items: center;
         gap: 0rem;
+        /* padding: 0; */
+        /* margin: 0 0 0 2rem; */
+        /* margin-left: 2.4rem; */
+        padding-left: 2.4rem;
+        /* grid-template-columns: repeat(4,1fr); */
+    }
+
+    .secaoContato .formasDePagamento div > img {
+        /* border: 1px solid red; */
+        width: 5rem;
+        /* height: 3.3rem; */
+        border-radius: 0.4rem;
+    }
+
+    .rodape {
+        /* border: 1px solid red; */
+        padding: 1.2rem;
     }
 }
