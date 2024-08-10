@@ -90,3 +90,30 @@
     cursor: pointer;
     color: var(--cor-vermelha-primaria);
 }
+
+@media (max-width: 480px) {
+    .secaoContato {
+        flex-direction: column;
+        gap: 2.4rem;
+        padding: 2rem;
+    }
+
+    .contato,
+    .servicos {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .formasDePagamento >h3 {
+        text-align: center;
+    }
+
+    .formasDePagamento > div {
+        /* display: flex; */
+        /* justify-content: center; */
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 0rem;
+    }
+}
