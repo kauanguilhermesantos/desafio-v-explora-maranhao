@@ -31,3 +31,17 @@
     text-align: center;
     padding: 24rem 0;
 }
+
+@media (max-width: 834px) {
+    .banner > h1, .bannerSobre > h1 {
+        /* border: 1px solid red; */
+        padding: 24rem 2rem;
+        /* margin: 1.4rem 0; */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner > h1, .bannerSobre > h1 {
+        padding: 20rem 2rem;
+    }
+}
