@@ -48,19 +48,9 @@ export function Slider() {
             nome={atrativo.nome}
             tipo={atrativo.tipo}
             imagemSource={atrativo.imagemSource}
+            cidade={atrativo.cidade}
         />
     ));
-
-    // console.log(atrativos);
-    // console.log(atrativos[1].nome);
-    // console.log(atrativos[1].nome);
-
-
-    // const cards = atrativos.slice(0, 4).forEach((atrativo) => {
-    //     <CardSlider />
-    // });
-
-
 
     return (
         <div className="slider">

@@ -7,14 +7,14 @@
   },
   {
     "id" : 2,
-    "nome": "Chapada das Mesas",
-    "descricao": "O Parque Nacional da Chapada das Mesas protege 160.046 hectares de Cerrado nos municípios de Carolina, Riachão, Estreito e Imperatriz, no centro-sul do Maranhão. Criado em 2005; é um dos mais novos parques nacionais do Brasil. Florestas de buritizais, sertões, relevo de chapadas vermelhas, compõem um estonteante conjunto de curiosas formações rochosas, cânions, cavernas e cachoeiras. Além do PARNA, o polo compreende inúmeras surpresas e aventuras que uma viagem pode revelar.",
+    "nome": "Lençóis & Delta",
+    "descricao": "Os Lençóis Maranhenses ficam no litoral oriental do Maranhão e abrigam os municípios de Humberto de Campos, Primeira Cruz, Santo Amaro e Barreirinhas; este último sendo o principal portão de entrada para sua fantástica beleza natural. O PARNA fica às margens do Rio Preguiças, são 155 mil hectares de paisagens deslumbrantes, com dunas com até 40 metros de altura e lagoas de água doce e cristalina. O Delta das Américas, localizado a nordeste do Estado, na divisa com o Piauí, compreende a região sob influência do Delta do Rio Parnaíba, que tem 70% da sua área no Maranhão.",
     "imagemSource": ""
   },
   {
     "id" : 3,
-    "nome": "Lençóis & Delta",
-    "descricao": "Os Lençóis Maranhenses ficam no litoral oriental do Maranhão e abrigam os municípios de Humberto de Campos, Primeira Cruz, Santo Amaro e Barreirinhas; este último sendo o principal portão de entrada para sua fantástica beleza natural. O PARNA fica às margens do Rio Preguiças, são 155 mil hectares de paisagens deslumbrantes, com dunas com até 40 metros de altura e lagoas de água doce e cristalina. O Delta das Américas, localizado a nordeste do Estado, na divisa com o Piauí, compreende a região sob influência do Delta do Rio Parnaíba, que tem 70% da sua área no Maranhão.",
+    "nome": "Chapada das Mesas",
+    "descricao": "O Parque Nacional da Chapada das Mesas protege 160.046 hectares de Cerrado nos municípios de Carolina, Riachão, Estreito e Imperatriz, no centro-sul do Maranhão. Criado em 2005; é um dos mais novos parques nacionais do Brasil. Florestas de buritizais, sertões, relevo de chapadas vermelhas, compõem um estonteante conjunto de curiosas formações rochosas, cânions, cavernas e cachoeiras. Além do PARNA, o polo compreende inúmeras surpresas e aventuras que uma viagem pode revelar.",
     "imagemSource": ""
   }
 ]

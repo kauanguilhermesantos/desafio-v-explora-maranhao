@@ -158,3 +158,87 @@ aside > h3 {
 .filter input[type="checkbox"]:checked + .checkbox-custom::after {
     display: block;
 }
+
+@media (max-width: 834px) {
+    .caixaBusca {
+        /* border: 1px solid red; */
+        width: 90%;    
+    }
+
+    aside {
+        /* border: 1px solid red; */
+        margin: 0 7rem;
+    }
+    
+    main {
+        /* border: 1px solid red; */
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+
+    .list-filter {
+        /* border: 1px solid red; */
+        /* padding: 0px 3rem; */
+        display: grid;
+        /* align-items: start; */
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin-bottom: 3rem;
+        padding: 0 6rem;
+    }
+
+    .filter {
+        /* border: 1px solid red; */
+        justify-content: start;
+    }
+
+    main > div {
+        /* border: 1px solid red; */
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .caixaBusca {
+        /* border: 1px solid red; */
+        width: 90%;    
+    }
+
+    aside {
+        /* border: 1px solid red; */
+        margin: 0 2rem;
+    }
+    
+    main {
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+
+    .list-filter {
+        /* border: 1px solid red; */
+        /* padding: 0px 3rem; */
+        display: grid;
+        /* align-items: start; */
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin-bottom: 3rem;
+        padding: 0px;
+    }
+
+    .filter {
+        /* border: 1px solid red; */
+        justify-content: start;
+    }
+
+    main > div {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 1fr;
+        /* gap: 3rem; */
+        /* flex-wrap: wrap; */
+        /* margin: auto; */
+        /* margin: 0 2rem; */
+        justify-content: center;
+    }
+}

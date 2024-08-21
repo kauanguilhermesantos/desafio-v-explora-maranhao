@@ -32,8 +32,9 @@ class AtrativoController {
         descricao: novoAtrativo.descricao,
         imagemSource: novoAtrativo.imagemSource,
         mapa: novoAtrativo.mapa,
-        DestinoId: novoAtrativo.DestinoId
-      })
+        DestinoId: novoAtrativo.DestinoId,
+        cidade: novoAtrativo.cidade
+      });
       res.status(200).json({ message: "atrativo criado" });
     } catch (error) {
       res.status(500).json({ message: `erro - ${error.message}` })

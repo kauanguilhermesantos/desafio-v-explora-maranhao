@@ -1,26 +1,28 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React from "react";
+import { useEffect, useState } from "react";
 import "./areaPesquisa.css";
 import { FaSearch } from "react-icons/fa";
-import Card from '../Card/Card';
-
+import Card from "../Card/Card";
 
 import api from "../../api";
 
-
 export default function AreaPesquisa() {
-
-    const tiposFiltros = ['Praia', 'Museu', 'Parque', 'Natureza', 'Aventura', 'Evento'];
-
+    const tiposFiltros = [
+        "Praia",
+        "Museu",
+        "Parque",
+        "Natureza",
+        "Aventura",
+        "Evento",
+    ];
 
     // api data
     const [atrativos, setAtrativo] = useState([]);
     // barra busca
-    const [busca, setBusca] = useState('');
+    const [busca, setBusca] = useState("");
     // filters
     const [selectedFilters, setSelectedFilters] = useState([]);
     // const [atrativosComFiltro, setAtrativosComFiltro] = useState(atrativos);
-
 
     // function para pegar resultado da requisição da api
     async function getAtrativos() {
@@ -33,22 +35,33 @@ export default function AreaPesquisa() {
         getAtrativos();
     }, [selectedFilters]);
 
-
     const handleCheckboxChange = (category) => {
         setSelectedFilters((prevSelectedFilters) =>
             prevSelectedFilters.includes(category)
                 ? prevSelectedFilters.filter((c) => c !== category)
-                : [...prevSelectedFilters, category]
+                : [...prevSelectedFilters, category],
         );
     };
 
-
-    const atrativosFiltrados = atrativos.filter(atrativo => atrativo.nome.toLowerCase().includes(busca.toLowerCase()));
-
-    const filteredItems = atrativosFiltrados.filter((item) =>
-        selectedFilters.length === 0 || selectedFilters.includes(item.tipo)
+    const atrativosFiltrados = atrativos.filter(
+        (atrativo) =>
+            atrativo.nome.toLowerCase().includes(busca.toLowerCase()) ||
+            atrativo.cidade.toLowerCase().includes(busca.toLowerCase()),
     );
 
+    document.addEventListener("keypress", (tecla) => {
+        if (tecla.key == "Enter") {
+            const searchContent = document.getElementById("conteudo-busca").value;
+            tecla.preventDefault();
+            // console.log(searchContent);
+            setBusca(searchContent);
+        }
+    });
+
+    const filteredItems = atrativosFiltrados.filter(
+        (item) =>
+            selectedFilters.length === 0 || selectedFilters.includes(item.tipo),
+    );
 
     // componente filtro
     const Filtro = ({ tipo }) => {
@@ -60,13 +73,11 @@ export default function AreaPesquisa() {
                     onChange={() => handleCheckboxChange(tipo)}
                     checked={selectedFilters.includes(tipo)}
                 />
-                <span class="checkbox-custom"></span>
+                <span className="checkbox-custom"></span>
                 {tipo}
             </label>
-        )
-    }
-
-
+        );
+    };
 
     return (
         <body>
@@ -82,7 +93,8 @@ export default function AreaPesquisa() {
                         className="caixaBusca_button"
                         type="button"
                         onClick={() => {
-                            const searchContent = document.getElementById('conteudo-busca').value;
+                            const searchContent =
+                                document.getElementById("conteudo-busca").value;
                             // console.log(searchContent);
                             setBusca(searchContent);
                         }}
@@ -95,31 +107,31 @@ export default function AreaPesquisa() {
                 <aside>
                     <h3>Categorias</h3>
                     <ul className="list-filter">
-
-                        { // filtros
-                            tiposFiltros.map((tipoFiltro, key) =>
+                        {
+                            // filtros
+                            tiposFiltros.map((tipoFiltro, key) => (
                                 <Filtro tipo={tipoFiltro} key={key} />
-                            )
+                            ))
                         }
-
                     </ul>
                 </aside>
                 <div>
-                    { // cards dinamicos
-                        filteredItems.map((props, key) =>
+                    {
+                        // cards dinamicos
+                        atrativosFiltrados.map((props, key) => (
                             <Card
                                 key={key}
                                 nome={props.nome}
                                 tipo={props.tipo}
+                                mapa={props.mapa}
                                 descricao={props.descricao}
                                 cidade={props.cidade}
-                                mapa={props.mapa}
                                 imagemSource={props.imagemSource}
                             />
-                        )
+                        ))
                     }
                 </div>
             </main>
         </body>
-    )
+    );
 }

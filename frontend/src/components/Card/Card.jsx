@@ -2,15 +2,12 @@ import React from "react";
 import "./card.css";
 // import imagemTeste from "../../assets/img/1.png";
 import Modal from "react-modal";
-import parse from "html-react-parser"
+import parse from "html-react-parser";
 import { useState, useEffect, useRef } from "react";
-
 
 Modal.setAppElement("#root");
 
 export default function Card(props) {
-
-
     const [modalIsOpen, setIsOpen] = useState(false);
     const modalRef = useRef();
 
@@ -22,7 +19,6 @@ export default function Card(props) {
         event.stopPropagation();
         closeModal();
     }
-
 
     function closeModal() {
         setIsOpen(false);
@@ -46,15 +42,20 @@ export default function Card(props) {
         };
     }, [modalIsOpen]);
 
-
     return (
         <div className="cardDestinosMaisProcurados" onClick={openModal}>
-            <img src={props.imagemSource} alt="Imagem teste" className="imagemCardDestinoMaisProcurado" />
+            <img
+                src={props.imagemSource}
+                alt="Imagem teste"
+                className="imagemCardDestinoMaisProcurado"
+            />
             <div className="infoCardDestinosMaisProcurado">
                 <p className="NomeCardDestinoMaisProcurado">{props.nome}</p>
                 <div>
                     <p className="cidadeCardDestinoMaisProcurado">{props.cidade}</p>
-                    <span className="tipoAtrativoCardDestinoMaisProcurado">{props.tipo}</span>
+                    <span className="tipoAtrativoCardDestinoMaisProcurado">
+                        {props.tipo}
+                    </span>
                 </div>
             </div>
             <Modal
@@ -66,23 +67,27 @@ export default function Card(props) {
             // shouldCloseOnOverlayClick={true}
             >
                 <div ref={modalRef}>
-                    <img src={props.imagemSource} alt="imagem atrativo" className="imagemModal" />
+                    <img
+                        src={props.imagemSource}
+                        alt="imagem atrativo"
+                        className="imagemModal"
+                    />
                     {console.log(props.imagemSource)}
                     <div className="infoModal">
-                        <button onClick={closeModalButton} className="botaoModal">X</button>
+                        <button onClick={closeModalButton} className="botaoModal">
+                            X
+                        </button>
                         <h4>{props.nome}</h4>
                         <p className="cidadeModal">{props.cidade}</p>
                         <p className="descricaoModal">{props.descricao}</p>
                     </div>
                 </div>
 
-
                 <div className="mapaModal" id="mapaIframe">
-                    {parse(props.mapa)}
-                    {/* <iframe width="2000" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={props.mapa}><a href="https://www.gps.ie/">gps devices</a></iframe> */}
+                    {parse(props.mapa.toString())}
                 </div>
                 {/* <iframe src="" frameborder="0"></iframe> */}
             </Modal>
         </div>
-    )
-} 
+    );
+}

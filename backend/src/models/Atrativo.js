@@ -1,8 +1,8 @@
 const Destino = require("./Destino");
 
 module.exports = (sequelize, DataTypes) => {
-
-  const Atrativo = sequelize.define("Atrativo",
+  const Atrativo = sequelize.define(
+    "Atrativo",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       nome: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       tipo: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       descricao: {
         type: DataTypes.TEXT,
@@ -26,6 +26,9 @@ module.exports = (sequelize, DataTypes) => {
       mapa: {
         type: DataTypes.TEXT,
       },
+      cidade: {
+        type: DataTypes.STRING,
+      },
       // destinoId: {
       //   type: DataTypes.INTEGER,
       // references: {
@@ -35,20 +38,16 @@ module.exports = (sequelize, DataTypes) => {
       // }
     },
     {
-      tableName: 'atrativos',
+      tableName: "atrativos",
       timestamps: false,
-      freezeTableName: true
-    }
+      freezeTableName: true,
+    },
   );
 
   Atrativo.associate = (models) => {
     Atrativo.belongsTo(models.Destino);
     models.Destino.hasMany(Atrativo);
-
-  }
+  };
 
   return Atrativo;
-
-}
-
-
+};
